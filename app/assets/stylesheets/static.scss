@@ -1,0 +1,63 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#landing {
+  background: asset-url('landing-background.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 400px;
+
+  .row {
+    @include row(table);
+    height: 100vh;
+  }
+
+  .header {
+    @include span-columns(4);
+    background: rgba(0, 0, 0, .7);
+    padding-left: 3%;
+    vertical-align: middle;
+
+    h1 {
+      color: lightyellow;
+      font-family: 'Raleway', sans-serif;
+      font-size: 3em;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 2em;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .content {
+    @include span-columns(8);
+    text-align: center;
+    vertical-align: middle;
+
+    a {
+      background-color: black;
+      border-radius: 10px;
+      color: lightyellow;
+      font-family: 'Raleway', sans-serif;
+      font-size: 2em;
+      padding: .8em;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 1.5em;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1em;
+      }
+
+      &:hover,
+      &:focus {
+        color: white;
+      }
+    }
+  }
+}

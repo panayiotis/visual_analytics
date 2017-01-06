@@ -1,4 +1,4 @@
-#{$all-buttons} {
+#{$all-buttons}, .button {
   appearance: none;
   background-color: $action-color;
   border: 0;
@@ -27,7 +27,7 @@
 
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: .5;
 
     &:hover {
       background-color: $action-color;

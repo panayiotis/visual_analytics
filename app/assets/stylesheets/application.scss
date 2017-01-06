@@ -12,7 +12,10 @@
  *
  *= require_self
  */
- 
+
 @import 'neat';
 @import 'bourbon';
 @import 'base/base';
+
+@import 'common';
+@import 'static';
