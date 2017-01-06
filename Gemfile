@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'haml-rails', '~> 0.9'
+gem 'bourbon', '5.0.0.beta.7'
+gem 'neat', '1.8.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
