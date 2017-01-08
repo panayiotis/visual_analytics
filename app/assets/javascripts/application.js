@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//
+//= require fullpage/jquery.fullpage.extensions.min
+//
 //= require_tree .

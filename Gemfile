@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'haml-rails', '~> 0.9'
+gem 'redcarpet'
 gem 'bourbon', '5.0.0.beta.7'
 gem 'neat', '1.8.0'
 
@@ -62,6 +63,11 @@ group :development do
   gem 'guard-ctags-bundler'
   gem 'guard-shell'
   gem 'rubocop', require: false
+  gem 'scss_lint', require: false
+end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-fullpage'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

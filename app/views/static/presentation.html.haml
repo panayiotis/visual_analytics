@@ -1,0 +1,165 @@
+%label#presentation-switch
+  %input{                       |
+    checked: true,              |
+    type: "checkbox",           |
+    value: "checked",           |
+    name: "presentation-switch" |
+  }/                            |
+  .checkbox
+
+#presentation-timer
+
+#presentation.presentation
+
+  #section0.section.active
+    %h1 European Big Data Hackathon
+
+    .notes
+      %h3 Welcome
+      %p
+        Presentation notes
+        can be
+        %span.bold turned off
+        and on from the switch on the top right
+        corner of the window ↗
+      %p
+        Press the down arrow key or space-bar to move to the next slide.
+      %hr
+      :markdown
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus vitae risus sit amet diam pretium sodales ut in sem.
+        Sed pulvinar nunc sit amet ligula maximus tincidunt.
+        Nullam vel auctor odio. Proin rhoncus lorem a sapien dignissim,
+        sit amet mattis ligula porta. Nam dictum fermentum lacus,
+        ut porttitor nunc condimentum sit amet.
+        Donec nisi turpis, blandit quis vestibulum eu, fermentum a felis.
+
+  #section1.section
+    %h1 Team
+    .notes
+      :markdown
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus vitae risus sit amet diam pretium sodales ut in sem.
+        Sed pulvinar nunc sit amet ligula maximus tincidunt.
+        Nullam vel auctor odio. Proin rhoncus lorem a sapien dignissim,
+        sit amet mattis ligula porta. Nam dictum fermentum lacus,
+        ut porttitor nunc condimentum sit amet.
+        Donec nisi turpis, blandit quis vestibulum eu, fermentum a felis.
+
+  #section2.section
+    %h1 Architecture
+    .notes
+      :markdown
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus vitae risus sit amet diam pretium sodales ut in sem.
+        Sed pulvinar nunc sit amet ligula maximus tincidunt.
+        Nullam vel auctor odio. Proin rhoncus lorem a sapien dignissim,
+        sit amet mattis ligula porta. Nam dictum fermentum lacus,
+        ut porttitor nunc condimentum sit amet.
+        Donec nisi turpis, blandit quis vestibulum eu, fermentum a felis.
+
+  #section3.section
+    %h1 Big Data Processing Engine
+    .notes
+      :markdown
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus vitae risus sit amet diam pretium sodales ut in sem.
+        Sed pulvinar nunc sit amet ligula maximus tincidunt.
+        Nullam vel auctor odio. Proin rhoncus lorem a sapien dignissim,
+        sit amet mattis ligula porta. Nam dictum fermentum lacus,
+        ut porttitor nunc condimentum sit amet.
+        Donec nisi turpis, blandit quis vestibulum eu, fermentum a felis.
+
+  #section4.section
+    %h1 Web Application
+    .notes
+      :markdown
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus vitae risus sit amet diam pretium sodales ut in sem.
+        Sed pulvinar nunc sit amet ligula maximus tincidunt.
+        Nullam vel auctor odio. Proin rhoncus lorem a sapien dignissim,
+        sit amet mattis ligula porta. Nam dictum fermentum lacus,
+        ut porttitor nunc condimentum sit amet.
+        Donec nisi turpis, blandit quis vestibulum eu, fermentum a felis.
+
+  #section5.section
+    %h1 Visualization
+    .notes
+      :markdown
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Vivamus vitae risus sit amet diam pretium sodales ut in sem.
+        Sed pulvinar nunc sit amet ligula maximus tincidunt.
+        Nullam vel auctor odio. Proin rhoncus lorem a sapien dignissim,
+        sit amet mattis ligula porta. Nam dictum fermentum lacus,
+        ut porttitor nunc condimentum sit amet.
+        Donec nisi turpis, blandit quis vestibulum eu, fermentum a felis.
+
+:coffee
+  # $('.notes').map(function(){return this.innerHTML}).get().join("<hr>");
+  $(document).on 'turbolinks:load', ->
+    #$('body').css('min-width', '100px')
+    if $('#presentation-switch input').first().prop('checked')
+      console.log 'turn notes on'
+      $('.notes').show()
+    else
+      $('.notes').hide()
+      console.log 'turn notes off'
+
+    $('#presentation-switch').change (event)->
+      if event.target.checked
+        console.log 'turn notes on'
+        $('.notes').fadeIn()
+      else
+        $('.notes').fadeOut()
+        console.log 'turn notes off'
+
+    $(document).find('#presentation').not('.fullpage-wraper')
+      .fullpage
+        sectionsColor: [
+          ''
+          '#f2f2f2'
+          '#1D1F21'
+          '#f2f2f2'
+          '#222222'
+          ''
+        ],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: [
+          'Title'
+          'Team'
+          'Architecture'
+          'Big Data Processing Engine'
+          'Web Application'
+          'Visualization'
+        ],
+        anchors: [
+          'title'
+          'team'
+          'architecture'
+          'big-data-processing-engine'
+          'web-application'
+          'visualization'
+        ]
+
+    start=Math.floor(new Date() / 1000)
+
+    $('#presentation-timer').click (event)->
+      $('#presentation-timer').html 'reset'
+      start=Math.floor(new Date() / 1000)
+
+    console.log new Date() - start
+
+    setInterval ->
+      now= Math.floor(new Date() / 1000)
+      min=Math.floor((now - start)/60)
+      sec=(now - start)%60
+      if now - start > 0
+        if min == 0
+          $('#presentation-timer').html sec
+        else
+          $('#presentation-timer').html min+":"+sec
+    ,1000
+
+    #SpotClusterVis.draw('#vis')
+
