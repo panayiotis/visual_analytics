@@ -14,6 +14,23 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 * Deployment instructions
 
+## Deployment
+
+#### Development
+
+Deploy development environment using docker
+
+        docker build -t hackathon .
+        docker run --rm -it -p 3000:3000 -v `pwd`:/var/www/hackathon:z hackathon rails server -b 0.0.0.0
+
+The web server is then accesible on http://localhost:3000
+
+#### Production
+
+Deploy using docker-compose
+
+        docker-compose up
+
 ## Contributing
 
 ### Git commit message guidelines
