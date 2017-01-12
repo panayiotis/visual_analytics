@@ -29,10 +29,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+# Use Haml markup language
 gem 'haml-rails', '~> 0.9'
 gem 'redcarpet'
+# Use Bourbon, a mixin library for Sass. Read more: http://bourbon.io
 gem 'bourbon', '5.0.0.beta.7'
+# Use Neat a css grid framework. Read more: http://neat.bourbon.io
 gem 'neat', '1.8.0'
 
 group :development, :test do
@@ -40,6 +42,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'awesome_print'
 
+  # Use Rspec behaviour briven bevelopment framework
   # http://www.chrisjmendez.com/2016/08/01/rails-5-testing-using-rspec/
   gem 'rspec-rails'
   gem 'factory_girl_rails'
@@ -62,16 +65,21 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-ctags-bundler'
   gem 'guard-shell'
+
+  # linters
   gem 'rubocop', require: false
   gem 'scss_lint', require: false
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-colorbrewer'
+  gem 'rails-assets-dcjs', '2.0.0'
   gem 'rails-assets-fullpage'
+  gem 'rails-assets-plotly.js'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# odd dependency
+# this is an odd dependency that some gem needs
 gem 'mini_portile2'

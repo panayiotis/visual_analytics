@@ -17,5 +17,8 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore public/assets/ as they are generated on deploy
+/public/assets/
+
 # Ignore Byebug command history file.
 .byebug_history

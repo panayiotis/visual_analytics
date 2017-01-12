@@ -179,9 +179,16 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-assets-colorbrewer (1.0.0)
+    rails-assets-crossfilter2 (1.3.14)
+    rails-assets-d3 (3.5.17)
+    rails-assets-dcjs (2.0.0)
+      rails-assets-crossfilter2 (~> 1.3)
+      rails-assets-d3 (~> 3.0)
     rails-assets-fullpage (2.9.2)
       rails-assets-jquery (>= 1.6.0)
     rails-assets-jquery (3.1.1)
+    rails-assets-plotly.js (1.21.3)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
@@ -307,7 +314,10 @@ DEPENDENCIES
   neat (= 1.8.0)
   puma (~> 3.0)
   rails (~> 5.0.1)
+  rails-assets-colorbrewer!
+  rails-assets-dcjs (= 2.0.0)!
   rails-assets-fullpage!
+  rails-assets-plotly.js!
   redcarpet
   rspec-rails
   rubocop

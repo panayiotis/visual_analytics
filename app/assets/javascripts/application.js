@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //
+//= require colorbrewer
+//= require crossfilter2
+//= require d3
+//= require dcjs
 //= require fullpage/jquery.fullpage.extensions.min
 //
 //= require_tree .

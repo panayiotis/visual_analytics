@@ -115,44 +115,38 @@
     }
   }
 
-  h1 {
+  h1,
+  p,
+  li {
     font-family: 'Raleway', sans-serif;
+  }
+
+  h1 {
     font-size: 3em;
   }
 
-  .content {
-    padding: 5vh 5vw 0;
-  }
-
-  p {
-    font-family: 'Raleway', sans-serif;
-
-    &.point {
-      font-size: 1.6em;
-      font-weight: 700;
-      margin-bottom: .1em;
-    }
-
-    &.expl {
-      font-size: 1.5em;
-      margin-left: 1em;
-    }
+  #section1,
+  #section2,
+  #section4,
+  #section6 {
+    padding: 5vh 0 0 5vw;
+    text-align: left;
   }
 
   #section0,
-  #section1,
-  #section2,
   #section3,
-  #section4,
   #section5 {
+    padding: 0;
     text-align: center;
   }
 
   #section2,
-  #section4 {
+  #section4,
+  #section6 {
     color: ghostwhite;
   }
 
+  // Title
   #section0 {
     background: asset-url('landing-background.jpg') no-repeat center center;
     background-size: cover;
@@ -165,24 +159,144 @@
     }
   }
 
+  // Team
   #section1 {
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    li {
+      font-size: 1.2em;
+    }
 
   }
 
+  // Architecture
   #section2 {
+    ul {
+      list-style-type: circle;
+    }
+
+    li {
+      font-size: 1.4em;
+    }
 
   }
 
+  // Big Data Processing Engine
   #section3 {
+    #big-data-processing-engine-vis {
+      height: 80%;
+    }
+
+    .master-worker-link {
+      stroke: #5f819d;
+      stroke-width: 1px;
+    }
+
+    .cloudeplo-master-link {
+      stroke: none;
+    }
+
+    .cloudeplo-worker-link {
+      stroke: indigo;
+      stroke-width: 1px;
+    }
+
+    .node {
+      fill: #000;
+      stroke: #fff;
+      stroke-width: 1px;
+    }
+
+    .master {
+      fill: #5f819d;
+      stroke: #4f718d;
+    }
+
+    .worker {
+      fill: #a54242;
+      stroke: #953232;
+    }
+
+    .cloudeplo {
+      fill: rgb(75, 0, 130);
+      stroke: rgb(65, 0, 110);
+    }
+
+    text {
+      stroke-width: 0;
+    }
 
   }
 
+  // Web Application
   #section4 {
+    ul {
+      list-style-type: circle;
+    }
+
+    li {
+      font-size: 1.4em;
+    }
+
 
   }
 
-  #section5 {
+  // Roadmap
+  #section6 {
+    ol {
+      list-style-type: decimal;
+    }
+
+    li {
+      font-size: 1.4em;
+      margin-bottom: .4em;
+    }
 
   }
 
+}
+
+
+
+#canada-crime {
+  @include outer-container;
+
+  .title {
+    @include span-columns(6);
+
+    padding-left: 5vw;
+    text-align: left;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .controls {
+    @include span-columns(1);
+    @include omega();
+
+    text-align: center;
+  }
+
+  #ca-chart {
+    @include span-columns(12);
+    @include omega();
+  }
+
+  #incident-chart {
+    @include span-columns(6);
+    }
+
+  #homicide-chart {
+    @include span-columns(6);
+    @include omega();
+  }
+
+  .deselected circle {
+    fill: rgba(200, 0, 0, .2);
+    stroke: none;
+  }
 }
