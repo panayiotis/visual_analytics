@@ -2,6 +2,7 @@ version: '2'
 services:
   proxy:
     image: nginx
+    restart: always
     volumes:
       - .:/var/www/hackathon:z
       - ./config/nginx.conf:/etc/nginx/conf.d/hackathon.conf:z
@@ -10,9 +11,10 @@ services:
 
   web:
     build: .
-    command: rails server -b /var/www/hackathon/tmp/sockets/server.sock
+    restart: always
     volumes:
       - .:/var/www/hackathon:z
     environment:
       - SECRET_KEY_BASE=be03a71850b50149f840e610c04e4bf7a9d18b1fa57d3aafd6eaec75a179df41161ae4992033c68450f8c7eee8d4c98b3b38acd8af84779e0ab8c2a29d89fe6f
       - RAILS_ENV=production
+    command: rails server -b /var/www/hackathon/tmp/sockets/server.sock
