@@ -1,0 +1,2085 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1031.6426"
+   height="577.12976"
+   viewBox="0 0 967.16487 541.05915"
+   id="svg4547"
+   version="1.1"
+   inkscape:version="0.92.1 r"
+   sodipodi:docname="vis.svg">
+  <defs
+     id="defs4549" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.94"
+     inkscape:cx="594.2296"
+     inkscape:cy="319.41753"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata4552">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-14.696608,-453.38688)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f58026;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="649.7215"
+       y="790.83301"
+       id="text5143"><tspan
+         sodipodi:role="line"
+         id="tspan5145"
+         x="649.7215"
+         y="790.83301"
+         style="font-size:52.56402969px;line-height:1.25;text-align:end;text-anchor:end;fill:#f58026;fill-opacity:1">↘ job</tspan><tspan
+         sodipodi:role="line"
+         x="649.7215"
+         y="856.53802"
+         style="font-size:52.56402969px;line-height:1.25;text-align:end;text-anchor:end;fill:#f58026;fill-opacity:1"
+         id="tspan5491">demand</tspan><tspan
+         sodipodi:role="line"
+         x="666.45575"
+         y="922.2431"
+         id="tspan5147"
+         style="font-size:52.56402969px;line-height:1.25;text-align:end;text-anchor:end;fill:#f58026;fill-opacity:1"> </tspan></text>
+    <g
+       transform="matrix(0.98261697,0.05782324,-0.05782324,0.98261697,424.67215,518.73054)"
+       id="Layer_1">
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="9"
+         y1="217"
+         x2="81"
+         y2="172"
+         id="line5368">
+        <animate
+           attributeName="y1"
+           from="217"
+           to="217"
+           begin="0s"
+           dur="4s"
+           values="217;244;244;208;208;217;217"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="81"
+         y1="172"
+         x2="153"
+         y2="181"
+         id="line5370">
+        <animate
+           attributeName="y1"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="153"
+         y1="181"
+         x2="225"
+         y2="145"
+         id="line5372">
+        <animate
+           attributeName="y1"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="225"
+         y1="145"
+         x2="297"
+         y2="55"
+         id="line5374">
+        <animate
+           attributeName="y1"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="297"
+         y1="55"
+         x2="369"
+         y2="72"
+         id="line5376">
+        <animate
+           attributeName="y1"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="369"
+         y1="72"
+         x2="441"
+         y2="45"
+         id="line5378">
+        <animate
+           attributeName="y1"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="45"
+           to="45"
+           begin="0s"
+           dur="4s"
+           values="45;36;36;54;54;45;45"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="9"
+         cy="217"
+         r="6"
+         id="circle5380">
+        <animate
+           attributeName="cy"
+           from="217"
+           to="217"
+           begin="0s"
+           dur="4s"
+           values="217;244;244;208;208;217;217"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="81"
+         cy="172"
+         r="6"
+         id="circle5382">
+        <animate
+           attributeName="cy"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="153"
+         cy="181"
+         r="6"
+         id="circle5384">
+        <animate
+           attributeName="cy"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="225"
+         cy="145"
+         r="6"
+         id="circle5386">
+        <animate
+           attributeName="cy"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="297"
+         cy="55"
+         r="6"
+         id="circle5388">
+        <animate
+           attributeName="cy"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="369"
+         cy="72"
+         r="6"
+         id="circle5390">
+        <animate
+           attributeName="cy"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:6;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="441"
+         cy="45"
+         r="6"
+         id="circle5392">
+        <animate
+           attributeName="cy"
+           from="45"
+           to="45"
+           begin="0s"
+           dur="4s"
+           values="45;36;36;54;54;45;45"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2e308a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="609.81982"
+       y="537.10516"
+       id="text5457"><tspan
+         sodipodi:role="line"
+         x="609.81982"
+         y="537.10516"
+         id="tspan5461"
+         style="font-size:52.56402969px;line-height:1.25">↗ job suplly</tspan></text>
+    <g
+       id="g5557"
+       transform="matrix(1.3141007,0,0,1.3141007,237.25787,535.46157)">
+      <g
+         id="Layer_1-6" />
+      <g
+         id="Layer_2"
+         transform="matrix(0.48153808,0.6315408,-0.61609679,0.49360904,268.85236,-98.346043)">
+        <line
+           id="line5525"
+           y2="208"
+           x2="81"
+           y1="181"
+           x1="9"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="181;171;171;190;190;181;181"
+             dur="4s"
+             begin="0s"
+             to="181"
+             from="181"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5527"
+           y2="127"
+           x2="153"
+           y1="208"
+           x1="81"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5529"
+           y2="82"
+           x2="225"
+           y1="127"
+           x1="153"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5531"
+           y2="118"
+           x2="297"
+           y1="82"
+           x1="225"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5533"
+           y2="45"
+           x2="369"
+           y1="118"
+           x1="297"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5535"
+           y2="36"
+           x2="441"
+           y1="45"
+           x1="369"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="36;12;12;18;18;36;36"
+             dur="4s"
+             begin="0s"
+             to="36"
+             from="36"
+             attributeName="y2" />
+        </line>
+        <circle
+           id="circle5537"
+           r="6"
+           cy="181"
+           cx="9"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="181;171;171;190;190;181;181"
+             dur="4s"
+             begin="0s"
+             to="181"
+             from="181"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5539"
+           r="6"
+           cy="208"
+           cx="81"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5541"
+           r="6"
+           cy="127"
+           cx="153"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5543"
+           r="6"
+           cy="82"
+           cx="225"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5545"
+           r="6"
+           cy="118"
+           cx="297"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5547"
+           r="6"
+           cy="45"
+           cx="369"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5549"
+           r="6"
+           cy="36"
+           cx="441"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:6;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="36;12;12;18;18;36;36"
+             dur="4s"
+             begin="0s"
+             to="36"
+             from="36"
+             attributeName="cy" />
+        </circle>
+      </g>
+    </g>
+    <g
+       transform="matrix(1.3378528,0,0,1.3378528,-1550.0262,1215.7617)"
+       id="layer1-6"
+       inkscape:label="Layer 1"
+       style="stroke-width:0.74746639">
+      <path
+         inkscape:connector-curvature="0"
+         id="rect11665"
+         d="m 1258.8241,-335.03542 c -5.0206,0 -9.0625,4.04193 -9.0625,9.0625 v 2.66992 146.14454 2.66992 c 0,5.02057 4.0419,9.0625 9.0625,9.0625 h 115.4257 c 5.0206,0 9.0606,-4.04193 9.0606,-9.0625 v -2.66992 -146.14454 -2.66992 c 0,-5.02057 -4.04,-9.0625 -9.0606,-9.0625 z m 0.248,14.25977 h 114.9395 v 138.50976 h -114.9395 z m 57.4648,141.38086 a 5.8524151,5.8524151 0 0 1 5.8516,5.85351 5.8524151,5.8524151 0 0 1 -5.8516,5.85157 5.8524151,5.8524151 0 0 1 -5.8535,-5.85157 5.8524151,5.8524151 0 0 1 5.8535,-5.85351 z m -36.2792,2.36914 a 3.6229236,3.6229236 0 0 1 3.623,3.62305 3.6229236,3.6229236 0 0 1 -3.623,3.62304 3.6229236,3.6229236 0 0 1 -3.6231,-3.62304 3.6229236,3.6229236 0 0 1 3.6231,-3.62305 z m 67.582,0 a 3.6229236,3.6229236 0 0 1 3.623,3.62305 3.6229236,3.6229236 0 0 1 -3.623,3.62304 3.6229236,3.6229236 0 0 1 -3.6231,-3.62304 3.6229236,3.6229236 0 0 1 3.6231,-3.62305 z"
+         style="fill:#000000;stroke-width:0.74746639" />
+      <path
+         sodipodi:nodetypes="ccccccccccccsccsccccccccccscccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path11691"
+         d="m 1197.3581,-260.2676 v 0 c -7.0546,-0.0107 -14.4662,-0.0301 -19.9902,0 -5.1658,0.0282 -6.1857,7.41695 -6.3867,9.72365 h -0.082 v 1.00196 l -0.543,72.74414 v 0.70898 0 0.63086 0.70898 h 0.084 c 0.1561,1.75861 1.1124,9.27725 6.5098,9.30665 5.6397,0.0307 13.2202,0.0107 20.4082,0 0.3087,-4.7e-4 0.5697,4.4e-4 0.8769,0 7.1887,0.0107 14.7692,0.0307 20.4082,0 6.0757,-0.0331 6.0098,-10.18165 6.0098,-10.18165 h -0.043 v -0.41796 c 0.031,-0.52809 0.043,-0.92383 0.043,-0.92383 h -0.039 l 0.1641,-71.90235 c 0,0 10e-4,-0.28143 0,-0.33398 -2e-4,-0.007 0,-0.0347 0,-0.043 v -0.96289 c 0,0 10e-4,-0.28143 0,-0.33398 -0.022,-0.9488 -0.378,-9.69418 -6.1348,-9.72558 -5.8819,-0.0321 -13.8221,-0.0107 -21.2851,0 z m -5.3437,9.06738 h 11.7793 l 2.8574,1.98047 h 16.2149 v 75.51172 h -49.7676 v -75.51172 h 16.1191 z m 5.5527,78.49024 c 1.63,-1e-4 2.9514,1.41571 2.9512,3.16211 2e-4,1.7464 -1.3212,3.16221 -2.9512,3.16211 -1.6299,1e-4 -2.9513,-1.41571 -2.9511,-3.16211 -2e-4,-1.7464 1.3212,-3.16221 2.9511,-3.16211 z"
+         style="fill:#000000;stroke-width:0.74746639" />
+      <g
+         style="fill:#000000;stroke-width:0.74746639"
+         transform="translate(1052.3145,-236.05514)"
+         id="g4306">
+        <path
+           d="m 447.42999,3.3400416 v 0.0332 h 118.8476 l -8.8496,39.5273504 c -2.95,13.569 -15.3411,22.41828 -28.9101,21.23828 h -0.5899 c -1.77,0 -3.5391,1.77106 -3.5391,3.53906 0,1.771 1.1814,2.95117 2.3594,2.95117 h 0.5899 50.1465 11.8007 17.6993 11.2089 50.7364 0.5898 c 1.181,-0.59 2.3594,-1.77217 2.3594,-2.95117 0,-1.77 -1.7701,-3.53906 -3.5391,-3.53906 h -0.5898 c -13.569,0.59 -25.9592,-8.25928 -28.9082,-21.23828 l -8.8516,-39.5273504 h 151.2598 v -0.0332 z M 368.63698,-333.79441 c -7.079,0 -12.38867,5.30867 -12.38867,12.38867 v 307.9668 c 0,7.079 5.30967,12.38867 12.38867,12.38867 h 197.64061 l -0.006,0.0293 h 63.7246 l -0.006,-0.0293 h 197.6406 c 7.08,0 12.3907,-5.30967 12.3907,-12.38867 v -307.9668 c 1.181,-7.08 -4.1271,-12.38867 -11.2071,-12.38867 H 368.63668 Z m 8.25977,19.46875 h 444.83794 v 291.44531 h -0.5899 -444.24804 z m 221.32034,294.55078 a 7.5245337,7.5245337 0 0 1 7.5254,7.52344 7.5245337,7.5245337 0 0 1 -7.5254,7.52539 7.5245337,7.5245337 0 0 1 -7.5235,-7.52539 7.5245337,7.5245337 0 0 1 7.5235,-7.52344 z"
+           style="fill:#000000;stroke-width:0.74746639"
+           id="path12116"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <g
+       transform="matrix(0.30098786,0.01771198,-0.01771198,0.30098786,143.25301,837.02006)"
+       id="Layer_1-62"
+       style="stroke-width:3.26463985">
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="9"
+         y1="217"
+         x2="81"
+         y2="172"
+         id="line5368-9">
+        <animate
+           attributeName="y1"
+           from="217"
+           to="217"
+           begin="0s"
+           dur="4s"
+           values="217;244;244;208;208;217;217"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="81"
+         y1="172"
+         x2="153"
+         y2="181"
+         id="line5370-1">
+        <animate
+           attributeName="y1"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="153"
+         y1="181"
+         x2="225"
+         y2="145"
+         id="line5372-2">
+        <animate
+           attributeName="y1"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="225"
+         y1="145"
+         x2="297"
+         y2="55"
+         id="line5374-7">
+        <animate
+           attributeName="y1"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="297"
+         y1="55"
+         x2="369"
+         y2="72"
+         id="line5376-0">
+        <animate
+           attributeName="y1"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="369"
+         y1="72"
+         x2="441"
+         y2="45"
+         id="line5378-9">
+        <animate
+           attributeName="y1"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="45"
+           to="45"
+           begin="0s"
+           dur="4s"
+           values="45;36;36;54;54;45;45"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="9"
+         cy="217"
+         r="6"
+         id="circle5380-3">
+        <animate
+           attributeName="cy"
+           from="217"
+           to="217"
+           begin="0s"
+           dur="4s"
+           values="217;244;244;208;208;217;217"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="81"
+         cy="172"
+         r="6"
+         id="circle5382-6">
+        <animate
+           attributeName="cy"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="153"
+         cy="181"
+         r="6"
+         id="circle5384-0">
+        <animate
+           attributeName="cy"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="225"
+         cy="145"
+         r="6"
+         id="circle5386-6">
+        <animate
+           attributeName="cy"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="297"
+         cy="55"
+         r="6"
+         id="circle5388-2">
+        <animate
+           attributeName="cy"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="369"
+         cy="72"
+         r="6"
+         id="circle5390-6">
+        <animate
+           attributeName="cy"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:19.58783913;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="441"
+         cy="45"
+         r="6"
+         id="circle5392-1">
+        <animate
+           attributeName="cy"
+           from="45"
+           to="45"
+           begin="0s"
+           dur="4s"
+           values="45;36;36;54;54;45;45"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+    </g>
+    <g
+       id="g5557-9"
+       transform="matrix(0.40252547,0,0,0.40252547,85.845677,842.14498)"
+       style="stroke-width:3.26463985">
+      <g
+         id="Layer_1-6-2"
+         style="stroke-width:3.26463985" />
+      <g
+         id="Layer_2-0"
+         transform="matrix(0.48153808,0.6315408,-0.61609679,0.49360904,268.85236,-98.346043)"
+         style="stroke-width:3.26463985">
+        <line
+           id="line5525-2"
+           y2="208"
+           x2="81"
+           y1="181"
+           x1="9"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="181;171;171;190;190;181;181"
+             dur="4s"
+             begin="0s"
+             to="181"
+             from="181"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5527-3"
+           y2="127"
+           x2="153"
+           y1="208"
+           x1="81"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5529-7"
+           y2="82"
+           x2="225"
+           y1="127"
+           x1="153"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5531-5"
+           y2="118"
+           x2="297"
+           y1="82"
+           x1="225"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5533-9"
+           y2="45"
+           x2="369"
+           y1="118"
+           x1="297"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5535-2"
+           y2="36"
+           x2="441"
+           y1="45"
+           x1="369"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="36;12;12;18;18;36;36"
+             dur="4s"
+             begin="0s"
+             to="36"
+             from="36"
+             attributeName="y2" />
+        </line>
+        <circle
+           id="circle5537-2"
+           r="6"
+           cy="181"
+           cx="9"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="181;171;171;190;190;181;181"
+             dur="4s"
+             begin="0s"
+             to="181"
+             from="181"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5539-8"
+           r="6"
+           cy="208"
+           cx="81"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5541-9"
+           r="6"
+           cy="127"
+           cx="153"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5543-7"
+           r="6"
+           cy="82"
+           cx="225"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5545-3"
+           r="6"
+           cy="118"
+           cx="297"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5547-6"
+           r="6"
+           cy="45"
+           cx="369"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5549-1"
+           r="6"
+           cy="36"
+           cx="441"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:19.58783913;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="36;12;12;18;18;36;36"
+             dur="4s"
+             begin="0s"
+             to="36"
+             from="36"
+             attributeName="cy" />
+        </circle>
+      </g>
+    </g>
+    <g
+       transform="matrix(0.14753106,0.00868164,-0.00868164,0.14753106,19.092197,912.09484)"
+       id="Layer_1-4"
+       style="stroke-width:6.66040754">
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="9"
+         y1="217"
+         x2="81"
+         y2="172"
+         id="line5368-7">
+        <animate
+           attributeName="y1"
+           from="217"
+           to="217"
+           begin="0s"
+           dur="4s"
+           values="217;244;244;208;208;217;217"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="81"
+         y1="172"
+         x2="153"
+         y2="181"
+         id="line5370-8">
+        <animate
+           attributeName="y1"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="153"
+         y1="181"
+         x2="225"
+         y2="145"
+         id="line5372-4">
+        <animate
+           attributeName="y1"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="225"
+         y1="145"
+         x2="297"
+         y2="55"
+         id="line5374-5">
+        <animate
+           attributeName="y1"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="297"
+         y1="55"
+         x2="369"
+         y2="72"
+         id="line5376-03">
+        <animate
+           attributeName="y1"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <line
+         style="opacity:0.65;fill:none;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         x1="369"
+         y1="72"
+         x2="441"
+         y2="45"
+         id="line5378-6">
+        <animate
+           attributeName="y1"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+        <animate
+           attributeName="y2"
+           from="45"
+           to="45"
+           begin="0s"
+           dur="4s"
+           values="45;36;36;54;54;45;45"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </line>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="9"
+         cy="217"
+         r="6"
+         id="circle5380-1">
+        <animate
+           attributeName="cy"
+           from="217"
+           to="217"
+           begin="0s"
+           dur="4s"
+           values="217;244;244;208;208;217;217"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="81"
+         cy="172"
+         r="6"
+         id="circle5382-0">
+        <animate
+           attributeName="cy"
+           from="172"
+           to="172"
+           begin="0s"
+           dur="4s"
+           values="172;235;235;217;217;172;172"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="153"
+         cy="181"
+         r="6"
+         id="circle5384-6">
+        <animate
+           attributeName="cy"
+           from="153"
+           to="153"
+           begin="0s"
+           dur="4s"
+           values="153;99;99;144;144;153;153"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="225"
+         cy="145"
+         r="6"
+         id="circle5386-3">
+        <animate
+           attributeName="cy"
+           from="145"
+           to="145"
+           begin="0s"
+           dur="4s"
+           values="145;63;63;108;108;145;145"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="297"
+         cy="55"
+         r="6"
+         id="circle5388-20">
+        <animate
+           attributeName="cy"
+           from="55"
+           to="55"
+           begin="0s"
+           dur="4s"
+           values="55;45;45;63;63;55;55"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="369"
+         cy="72"
+         r="6"
+         id="circle5390-61">
+        <animate
+           attributeName="cy"
+           from="72"
+           to="72"
+           begin="0s"
+           dur="4s"
+           values="72;63;63;99;99;72;72"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+      <circle
+         style="fill:#ffffff;stroke:#2e308a;stroke-width:39.96244431;stroke-miterlimit:10"
+         stroke-miterlimit="10"
+         cx="441"
+         cy="45"
+         r="6"
+         id="circle5392-5">
+        <animate
+           attributeName="cy"
+           from="45"
+           to="45"
+           begin="0s"
+           dur="4s"
+           values="45;36;36;54;54;45;45"
+           keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+           keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+           calcMode="spline"
+           repeatCount="indefinite" />
+      </circle>
+    </g>
+    <g
+       id="g5557-7"
+       transform="matrix(0.19730034,0,0,0.19730034,-9.0463635,914.60684)"
+       style="stroke-width:6.66040754">
+      <g
+         id="Layer_1-6-6"
+         style="stroke-width:6.66040754" />
+      <g
+         id="Layer_2-5"
+         transform="matrix(0.48153808,0.6315408,-0.61609679,0.49360904,268.85236,-98.346043)"
+         style="stroke-width:6.66040754">
+        <line
+           id="line5525-6"
+           y2="208"
+           x2="81"
+           y1="181"
+           x1="9"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="181;171;171;190;190;181;181"
+             dur="4s"
+             begin="0s"
+             to="181"
+             from="181"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5527-9"
+           y2="127"
+           x2="153"
+           y1="208"
+           x1="81"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5529-3"
+           y2="82"
+           x2="225"
+           y1="127"
+           x1="153"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5531-7"
+           y2="118"
+           x2="297"
+           y1="82"
+           x1="225"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5533-4"
+           y2="45"
+           x2="369"
+           y1="118"
+           x1="297"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="y2" />
+        </line>
+        <line
+           id="line5535-5"
+           y2="36"
+           x2="441"
+           y1="45"
+           x1="369"
+           stroke-miterlimit="10"
+           style="opacity:0.65;fill:none;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="y1" />
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="36;12;12;18;18;36;36"
+             dur="4s"
+             begin="0s"
+             to="36"
+             from="36"
+             attributeName="y2" />
+        </line>
+        <circle
+           id="circle5537-25"
+           r="6"
+           cy="181"
+           cx="9"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="181;171;171;190;190;181;181"
+             dur="4s"
+             begin="0s"
+             to="181"
+             from="181"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5539-4"
+           r="6"
+           cy="208"
+           cx="81"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="208;162;162;190;190;208;208"
+             dur="4s"
+             begin="0s"
+             to="208"
+             from="208"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5541-7"
+           r="6"
+           cy="127"
+           cx="153"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="127;117;117;90;90;127;127"
+             dur="4s"
+             begin="0s"
+             to="127"
+             from="127"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5543-4"
+           r="6"
+           cy="82"
+           cx="225"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="82;127;127;145;145;82;82"
+             dur="4s"
+             begin="0s"
+             to="82"
+             from="82"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5545-4"
+           r="6"
+           cy="118"
+           cx="297"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="118;108;108;127;127;118;118"
+             dur="4s"
+             begin="0s"
+             to="118"
+             from="118"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5547-3"
+           r="6"
+           cy="45"
+           cx="369"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="45;27;27;36;36;45;45"
+             dur="4s"
+             begin="0s"
+             to="45"
+             from="45"
+             attributeName="cy" />
+        </circle>
+        <circle
+           id="circle5549-0"
+           r="6"
+           cy="36"
+           cx="441"
+           stroke-miterlimit="10"
+           style="fill:#ffffff;stroke:#f58026;stroke-width:39.96244431;stroke-miterlimit:10">
+          <animate
+             repeatCount="indefinite"
+             calcMode="spline"
+             keyTimes="0;0.22;0.33;0.55;0.66;0.88;1"
+             keySplines="0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1; 0.1 0.8 0.2 1"
+             values="36;12;12;18;18;36;36"
+             dur="4s"
+             begin="0s"
+             to="36"
+             from="36"
+             attributeName="cy" />
+        </circle>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+%label#presentation-switch
+  %input{                       |
+    checked: false,             |
+    type: "checkbox",           |
+    value: "checked",           |
+    name: "presentation-switch" |
+  }/                            |
+  .checkbox
+
+#presentation-timer
+
+#presentation2.presentation
+
+  #section0.section.active
+    %h1 European Big Data Hackathon
+
+    .notes
+
+  #section1.section
+    :markdown
+      # Team
+
+      ## Panayiotis Vlantis
+      * MSc Advanced Information Systems
+
+      ----
+
+      ## Nikolas Mpombetsis
+
+      * MSc Computing Systems: Software and Hardware
+
+      ----
+
+      ## Michael Mylonakis
+
+      * MEng Electrical and Computer Engineer
+      * MSc Computer Systems Technology and Computer Networking
+
+    .notes
+      :markdown
+        Παρουσίαση της ομάδας
+
+  #problem-section.section
+    :markdown
+      # Problem
+
+      * heterogeneous datasets
+      * existing visualization systems can not handle big data
+      * initial exploratory analysis
+    .notes
+
+  #solution-section.section
+    :markdown
+      # Solution
+
+      * end to end platform
+      * accessed by the policy makers as a web application
+      * custom visualization system
+      * aware of the problem domain
+      * connected to a big data processing engine
+
+  #cedefop-section.section
+    %h1 Analysis on job supply
+    #summary-map
+      .map
+      .row
+        .left-column
+          .pie
+        .right-column
+          .monthly-move-chart
+          .monthly-volume-chart
+
+  #eures-section.section
+    %h1 Analysis on job demand
+    #mobility-map
+      .map
+      .row
+        .left-column
+          .pie
+        .right-column
+          .monthly-move-chart
+          .monthly-volume-chart
+
+  #mobility-section.section
+    #mobility-sankey
+
+  #technology-section.section
+    :markdown
+      # Techology
+
+      * exploit dataset domain knowledge
+      * leverage data request granularity
+      * elevated user experience
+
+      # Workflow
+
+      * development - data-scientist - Apache Spark
+      * production  - policy-maker - Apache Solr
+
+  #pipeline-section.section
+    %h1 Report Pipeline Ecosystem
+    .row
+      #big-data-processing-engine-vis
+      .pm-div
+        =image_tag 'vis.svg'
+    .row
+      .a
+        :markdown
+          ## devops
+
+          * centralized datalake
+      .b
+        :markdown
+          ## data-scientist
+
+          * cluster as a workspace
+          * access the datalake
+      .c
+        :markdown
+          ## policy maker
+          * web application
+    .notes
+
+:coffee

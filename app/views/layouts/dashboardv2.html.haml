@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %title Statistics
+    %meta{                                               |
+      content: "width=device-width, initial-scale=1.0",  |
+      name: "viewport"                                   |
+    }/                                                   |
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -if Rails.env.development?
+      %script{src: "http://#{request.host}:35729/livereload.js?snipver=1" }
+  %body{data: {action: params[:action], controller: params[:controller]}}
+    .sidebar
+      %h1 Statistics
+      %hr
+      -#
+        %h2{class: tree_class('create')}
+          =icon('snowflake-o')
+          Tools
+        %ul
+          %li
+            = link_to 'Notebooks', "http://zeppelin.#{request.host}", data: { turbolinks: false }
+          %li
+            = link_to 'Search', "http://search.#{request.host}", data: { turbolinks: false }
+        %hr
+      %h2
+        =icon('bars')
+        =link_to "Reports", Dataset
+      %ul
+        - Dataset.all.each do |dataset|
+          %li{data: {'report-id': dataset.id}}
+            = link_to dataset.name, dataset, data: { turbolinks: false }
+
+      %hr
+
+    #dashboard-content
+      = yield
+- puts params.to_s
+

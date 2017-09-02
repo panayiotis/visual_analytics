@@ -1,0 +1,120 @@
+#presentation2 {
+
+  li{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  ul{
+    list-style-type: circle;
+  }
+
+  #problem-section,
+  #solution-section,
+  #technology-section {
+    padding-left: 4em;
+  }
+
+  #cedefop-section,
+  #eures-section {
+    h1{
+      font-size: 2em;
+      text-align: center;
+    }
+
+    #summary-map{
+      //position: relative;
+      //top: -50;
+    }
+  }
+  #mobility-section{
+    text-align: center
+  }
+    // Big Data Processing Engine
+    #pipeline-section {
+      h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2em;
+    }
+
+      #big-data-processing-engine-vis {
+        @include grid-column(8);
+        height: 300px;
+        border-top: 5px solid MediumSlateBlue;
+      }
+
+      .master-worker-link {
+        stroke: #5f819d;
+        stroke-width: 1px;
+      }
+
+      .cloudeplo-master-link {
+        stroke: none;
+      }
+
+      .cloudeplo-worker-link {
+        stroke: indigo;
+        stroke-width: 1px;
+      }
+
+      .node {
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+
+      .master {
+        fill: #5f819d;
+        stroke: #4f718d;
+      }
+
+      .worker {
+        fill: #a54242;
+        stroke: #953232;
+      }
+
+      .cloudeplo {
+        fill: rgb(75, 0, 130);
+        stroke: rgb(65, 0, 110);
+      }
+
+      text {
+        stroke-width: 0;
+      }
+
+      .row {
+        @include grid-container;
+      }
+
+      .pm-div{
+        @include grid-column(4);
+        border-top: 5px solid MediumAquaMarine ;
+        padding-top: 5em;
+        height: 100%;
+        img {
+          width: 80%;
+        }
+
+      }
+      .a,
+      .b,
+      .c {
+        @include grid-column(4);
+        padding-top: 1em;
+        padding-left: 2em;
+        margin-top: 30px;
+      }
+
+      .a{
+        border-top: 5px solid SteelBlue;
+      }
+      .b{
+        border-top: 5px solid Tomato;
+
+      }
+      .c{
+        border-top: 5px solid MediumAquaMarine ;
+
+      }
+    }
+}

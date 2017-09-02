@@ -255,10 +255,10 @@
 
 
 #canada-crime {
-  @include outer-container;
+  @include grid-container;
 
   .title {
-    @include span-columns(6);
+    @include grid-column(6);
 
     padding-left: 5vw;
     text-align: left;
@@ -269,24 +269,21 @@
   }
 
   .controls {
-    @include span-columns(1);
-    @include omega();
+    @include grid-column(1);
 
     text-align: center;
   }
 
   #ca-chart {
-    @include span-columns(12);
-    @include omega();
+    @include grid-column(12);
   }
 
   #incident-chart {
-    @include span-columns(6);
+    @include grid-column(6);
     }
 
   #homicide-chart {
-    @include span-columns(6);
-    @include omega();
+    @include grid-column(6);
   }
 
   .deselected circle {

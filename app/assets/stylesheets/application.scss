@@ -14,6 +14,7 @@
  *= require colorbrewer
  *= require dcjs
  *= require fullpage
+ *= require leaflet
  *
  */
 
@@ -25,3 +26,10 @@
 @import 'common';
 @import 'static';
 @import 'presentation';
+@import 'presentation2';
+@import 'presentation3';
+@import 'dashboard';
+@import 'datasets';
+@import 'reports';
+@import 'leaflet-legend';
+

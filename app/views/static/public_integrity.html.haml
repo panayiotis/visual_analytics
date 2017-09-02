@@ -1,0 +1,47 @@
+%label#presentation-switch
+  %input{                       |
+    checked: false,             |
+    type: "checkbox",           |
+    value: "checked",           |
+    name: "presentation-switch" |
+  }/                            |
+  .checkbox
+
+#presentation-timer
+
+#presentation3.presentation
+
+  #section0.section.active
+    %h1 Public Integrity Hackathon
+
+  #problem-section.section
+    :markdown
+      # Problem
+
+      * The most comprehensive gathering of data about corruption in Greece is available to the public as an 160page pdf report
+      * it is outdated
+      * it is not machine readable
+    .notes
+
+  #solution-section.section
+    :markdown
+      # Solution
+
+      * combine existing data of multiple corruption indexes
+      * generate live reports
+      * available to the public as a web application
+
+  #advantages-section.section
+    :markdown
+      # Advantages
+
+      * citizens interact with the data
+      * explore reports in municipality level
+      * engage potential whisleblowers
+
+  #prototype-section.section
+    :markdown
+      # Prototype
+
+    = link_to 'visit', Dataset,class: 'button'
+

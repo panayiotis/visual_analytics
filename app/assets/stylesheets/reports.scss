@@ -1,0 +1,79 @@
+// Place all the styles related to the reports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#summary-map{
+
+  position: relative;
+
+  a.reset-all{
+    position: absolute;
+    bottom: 320px;
+    left: 12px;
+    z-index: 1000;
+  }
+
+  .map-container{
+
+  }
+
+  .charts-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.8)
+  }
+  .map{
+    min-height: 350px;
+    margin: 0;
+  }
+
+  .row{
+    @include grid-container;
+    min-height: 300px;
+    border: 1px solid red;
+
+  }
+
+  .left-column{
+    @include grid-column(4);
+  }
+
+  .right-column{
+    @include grid-column(8);
+
+  }
+
+  .dc-chart{
+    border: 1px dotted blue;
+    //float: none !important;
+    //border: 1px solid red;
+  }
+}
+
+#mobility-sankey {
+  min-height: 760px;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+

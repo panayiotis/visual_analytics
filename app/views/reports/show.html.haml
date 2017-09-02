@@ -1,0 +1,8 @@
+%h2
+  = @report.name
+
+=render @report.short_name
+:coffee
+  $(document).on 'turbolinks:load', ->
+    $('.sidebar li[data-report-id]').removeClass('active')
+    $('.sidebar li[data-report-id="#{@report.id}"]').addClass('active')

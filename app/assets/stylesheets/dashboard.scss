@@ -1,0 +1,81 @@
+// Place all the styles related to the dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sidebar {
+  background: #303E4D;
+  //http://www.cssmatic.com/box-shadow
+  //box-shadow: 0 0 6px 5px #303E4D;
+  border-right: 1px solid black;
+  color: #dddddd;
+  min-height: 100%;
+  padding: 1em 0 0 0;
+  position: fixed;
+  //width: 210px;
+  width: 170px;
+
+  //@include media(771px) {
+  //  width: 225px;
+  //}
+  h1 {
+    text-align: center;
+  }
+
+  p.message {
+    font-style: italic;
+    margin-left: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      color: #b8c7ce;
+      border-left: 3px solid transparent;
+      padding: 12px 5px 12px 15px;
+      a {
+        color: #b8c7ce
+      }
+
+      &.active, &:hover {
+        border-left-color: #3c8dbc;
+        background-color: rgba(255,255,255,0.1);
+        a {
+          color: white;
+        }
+
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin-left: 10px;
+      a {
+        color: #b8c7ce
+      }
+  }
+
+  hr {
+    border-color: grey;
+    color: grey;
+  }
+  .active{
+    color: white;
+  }
+}
+
+#dashboard-content {
+  overflow-x: hidden;
+  //@include grid-visual;
+
+  //@include grid-container;
+  //border: 1px solid grey;
+
+  //margin: 0 0 0 210px;
+  margin: 0 0 0 170px;
+  //padding: 1vw;
+
+  //@include media(771px) {
+  //  margin: 0 2em 0 230px;
+  //}
+}

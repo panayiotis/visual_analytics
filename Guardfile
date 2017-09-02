@@ -19,7 +19,12 @@
 #   watch(%r{file/path}) { `command(s)` }
 #
 guard :shell do
-  watch(%r{(.*.(spec|rb))}) { |m| `reset`; puts "#{m[0]} changed" }
+  watch(%r{(.*.(spec|rb))}) { |m| `reset`; puts "#{m[0]} changed".yellow }
+
+  watch(%r{app/assets/javascripts(.*.(coffee|js))}) do
+    puts 'run docco'
+    `docco -o public/coffee app/assets/javascripts/*.{coffee,js}`
+  end
 end
 
 guard 'livereload' do

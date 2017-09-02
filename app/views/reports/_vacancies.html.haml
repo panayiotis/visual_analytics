@@ -1,0 +1,11 @@
+#summary-map
+  .map
+  .row
+    .left-column
+      .pie
+    .right-column
+      .monthly-move-chart
+      .monthly-volume-chart
+:coffee
+  Map.summary_map '#summary-map', '/spark/2/data.csv', cedefop_names_map, "vis1"
+

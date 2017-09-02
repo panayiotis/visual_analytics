@@ -19,7 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', '~> 0.12.3', platforms: :ruby
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -36,12 +37,15 @@ gem 'redcarpet'
 # Use Bourbon, a mixin library for Sass. Read more: http://bourbon.io
 gem 'bourbon', '5.0.0.beta.7'
 # Use Neat a css grid framework. Read more: http://neat.bourbon.io
-gem 'neat', '1.8.0'
+gem 'neat'
+
+gem 'awesome_print'
+
+gem 'font-awesome-sass', '~> 4.7.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'awesome_print'
 
   # Use Rspec behaviour briven bevelopment framework
   # http://www.chrisjmendez.com/2016/08/01/rails-5-testing-using-rspec/
@@ -49,6 +53,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'spring-commands-rspec'
   gem 'capybara'
+  gem 'jasmine'
 end
 
 group :test do
@@ -56,7 +61,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -74,7 +79,8 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-colorbrewer'
-  gem 'rails-assets-dcjs', '2.0.0'
+  gem 'rails-assets-dcjs'
+  gem 'rails-assets-leaflet'
   gem 'rails-assets-fullpage'
   gem 'rails-assets-plotly.js'
 end

@@ -1,4 +1,4 @@
-window.PresentationVisualizations = {}
+window.PresentationVisualizations = {} unless window.PresentationVisualizations 
 
 PresentationVisualizations.cluster = (element) ->
   width = $(element).width()

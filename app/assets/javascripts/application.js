@@ -15,7 +15,8 @@
 //= require turbolinks
 //
 //= require colorbrewer
-//= require crossfilter2
+//= require crossfilter2/crossfilter
+//= require leaflet
 //= require d3
 //= require dcjs
 //= require fullpage/jquery.fullpage.extensions.min

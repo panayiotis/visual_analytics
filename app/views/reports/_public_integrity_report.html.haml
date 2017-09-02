@@ -1,0 +1,28 @@
+%p#notice= notice
+- @eu = Dataset.find_by(name: 'ilc_pw03')
+- @oosa = Dataset.find_by(name: 'oosa dataset')
+
+#eu-chart
+  .row.map-container
+    .map
+  .row.charts-container
+    .left-column
+      .pie-chart
+    .right-column
+      .line-chart
+      .bar-chart
+  %a.reset-all.button{href: '#'} Reset charts
+#oosa-chart
+  .row.map-container
+    .map
+  .row.charts-container
+    .left-column
+      .pie-chart
+    .right-column
+      .line-chart
+      .bar-chart
+  %a.reset-all.button{href: '#'} Reset charts
+
+:coffee
+  Map.v4 '#eu-chart', "/datasets/#{@eu.id}.json", '/geojson/0.json', "eu-v4map"
+  Map.v4 '#oosa-chart', "/datasets/#{@oosa.id}.json", '/geojson/3/EL.json', "oosa-v4map"
