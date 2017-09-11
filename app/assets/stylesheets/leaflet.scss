@@ -1,0 +1,39 @@
+.info {
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font: 13px/15px Arial, Helvetica, sans-serif;
+
+  h4 {
+    margin: 0 0 5px;
+    color: #777;
+  }
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+
+  i {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    opacity: 0.7;
+  }
+}
+
+.leaflet-control-attribution {
+  float: none;
+  width: 100vw;
+  height: 32px;
+  padding: 0 10px;
+  border-top: 1px solid lightgrey;
+  line-height: 16px;
+  text-align: left;
+}
+
+.leaflet-top {
+  top: 40px;
+}

@@ -2,34 +2,24 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require colorbrewer/colorbrewer
+ *= require dc/dc
+ *= require highlight.js/styles/tomorrow-night-eighties
+ *= require leaflet/dist/leaflet
+ * require_tree .
  *= require_self
- *= require colorbrewer
- *= require dcjs
- *= require fullpage
- *= require leaflet
- *
  */
 
-@import 'neat';
-@import 'bourbon';
-@import 'base/base';
-
-@import 'fonts';
 @import 'common';
+@import 'foundation';
+@import 'leaflet';
 @import 'static';
-@import 'presentation';
-@import 'presentation2';
-@import 'presentation3';
-@import 'dashboard';
-@import 'datasets';
-@import 'reports';
-@import 'leaflet-legend';
-
+@import 'styleguide';
