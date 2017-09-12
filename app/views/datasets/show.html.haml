@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Type:
+  = @dataset.type
+%p
+  %b Name:
+  = @dataset.name
+%p
+  %b Description:
+  = @dataset.description
+%p
+  %b Schema json:
+  = @dataset.schema_json
+%p
+  %b Attribution:
+  = @dataset.attribution
+%p
+  %b Uri:
+  = @dataset.uri
+
+= link_to 'Edit', edit_dataset_path(@dataset)
+\|
+= link_to 'Back', datasets_path
