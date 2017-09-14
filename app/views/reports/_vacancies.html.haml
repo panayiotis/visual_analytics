@@ -1,0 +1,48 @@
+:ruby
+  data = {
+    component: 'cedefop',
+    id: "cedefop-#{rand(100)}",
+    data_uri: dataset_path(1, format: :json),
+    geojson_uri: "/data/europe.geo.json"
+  }
+
+#loading-wrapper
+  %p.loading-message
+    loading cedefop component
+  #loading
+
+%div[@report]
+  = content_tag(:div,
+    id: data[:id],
+    data: data.to_json,
+    class: "#{data[:component]}-component" ) do
+    .map-container
+      .map
+    .content-container.resizable
+      .content
+        .clearfix
+          %a.button.reset.float-right reset filters
+          %h1 Vacancies Report
+        .clearfix
+          .timeline-container
+            .timeline
+          .nut-chart-container
+            .nut-chart
+          .esco-chart-container
+            .esco-chart
+        .clearfix
+          .season-chart-container.float-left
+            .season-chart
+          %br
+          %br
+          %p.text-justify.chart-side-text
+            =Forgery(:lorem_ipsum).words(30)
+        .clearfix
+          %img.content-image.float-left{ width: "300px",
+            src: image_url('placeholder/image.png')}
+          %h2
+            =Forgery(:lorem_ipsum).words(3)
+          %p.text-justify
+            =Forgery(:lorem_ipsum).words(50)
+          %p.text-justify
+            =Forgery(:lorem_ipsum).words(20)

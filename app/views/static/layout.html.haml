@@ -1,0 +1,43 @@
+- content_for :head do
+  = javascript_pack_tag 'highlight'
+:ruby
+  code = File.read(__FILE__)
+  .gsub('.demo','')
+  .lines[7..-8].join # 0-indexed array
+
+.report-layout-1.demo
+  .component
+    .map-container
+      .map
+    .content-container.resizable
+      .content
+        .row
+          .large-12.columns
+            %h1 Layout
+            =link_to :components, components_path
+            .timeline-container
+              .timeline
+            .nut-chart-container
+              .nut-chart
+            .esco-chart-container
+              .esco-chart
+            .season-chart-container
+              .season-chart
+            %a.button.reset reset
+            %h2
+              =Forgery(:lorem_ipsum).words(3)
+            %p.justify
+              =Forgery(:lorem_ipsum).words(300)
+            %p.center
+              %img{width: "300px", src: image_url('placeholder/image.png')}
+            %p.justify
+              =Forgery(:lorem_ipsum).words(20)
+
+
+        .row
+          .large-12.columns
+            .row
+              .large-12.columns
+                %h1 Layout Code
+                %pre.haml
+                  %code.haml #{code}

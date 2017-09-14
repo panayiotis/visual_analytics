@@ -8,10 +8,16 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag    'application'
-    = javascript_pack_tag    'hello_react'
+    = javascript_pack_tag    'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag    'hello_react', 'data-turbolinks-track': 'reload'
     -if Rails.env.development?
       %script{src: "http://#{request.host}:35729/livereload.js?snipver=1" }
     = yield(:head)
-  %body
+  %body{                               |
+    data: {                            |
+      turbolinks: "false",             |
+      action: params[:action],         |
+      controller: params[:controller]  |
+    }                                  |
+  }                                    |
     = yield

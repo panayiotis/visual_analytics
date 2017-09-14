@@ -1,0 +1,12 @@
+.row
+  .large-12.columns
+    %h1 Components#index
+    %p Find me in app/views/components/index.html.haml
+    %table
+      - Dir.glob("#{Rails.root}/app/views/components/*.haml") |
+      .map{ |f| File.basename(f,".html.haml") }               |
+      .select{ |f| f!='index' }                               |
+      .each do |f|                                            |
+        %tr
+          %td
+            %a{href:"/components/#{f}"} #{f}

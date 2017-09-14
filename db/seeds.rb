@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 Report.create name: "Vacancies", short_name: "vacancies"
-Report.create name: "Unemployment", short_name: "unemployment"
-Report.create name: "Mobility", short_name: "mobility"
-Report.create name: "Public Integrity Report", short_name: "public_integrity_report"
+#Report.create name: "Unemployment", short_name: "unemployment"
+#Report.create name: "Mobility", short_name: "mobility"
+#Report.create name: "Public Integrity Report", short_name: "public_integrity_report"
 
 # Cedefop SparkDataset
 schema = '[

@@ -15,6 +15,7 @@
 //= require jquery/dist/jquery
 //= require what-input/dist/what-input
 //= require foundation-sites/dist/js/foundation
+//= require interactjs/interact
 //= require_tree .
 
 document.addEventListener('turbolinks:load', console.log('turbolinks:load'));
@@ -22,6 +23,6 @@ document.addEventListener('turbolinks:render', console.log('turbolinks:render'))
 document.addEventListener('turbolinks:before-render', console.log('turbolinks:before-render'));
 
 document.addEventListener('turbolinks:load', function(){
-  console.log('foundation:initialize');
+  console.log('foundation: initialize');
   $(document).foundation();
 });

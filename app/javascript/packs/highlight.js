@@ -14,7 +14,7 @@ import haml from 'highlight.js/lib/languages/haml'
 
 hljs.registerLanguage('haml', haml);
 
-console.log("highlight.js languages:");
-console.table(hljs.listLanguages());
+//console.log("highlight.js languages:");
+//console.table(hljs.listLanguages());
 
 hljs.initHighlightingOnLoad();
