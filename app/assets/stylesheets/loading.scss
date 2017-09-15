@@ -8,7 +8,20 @@
   z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: black;
+
+  // this inserts an image in the background
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.15;
+    background: image_url('loading_background.jpg') center/cover no-repeat;
+    content: '';
+  }
 
   .loading-message {
     position: relative;
@@ -18,11 +31,12 @@
     font-size: 25px;
     color: white;
     text-align: center;
-    }
+  }
 }
 
 #loading {
   position: relative;
+  top: 40%;
   left: 50%;
   display: block;
   width: 150px;

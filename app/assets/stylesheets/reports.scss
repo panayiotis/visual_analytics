@@ -1,0 +1,180 @@
+// Place all the styles related to the reports controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin report(
+  $nut-chart-height: 200px,
+  $esco-chart-height: 300px,
+  $timeline-height: 200px,
+  $bar-color: #8ad,
+  $initial-content-width: 50%) {
+
+  .map-container {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nut-chart {
+    height: $nut-chart-height;
+
+    .row {
+      fill: black;
+    }
+  }
+
+  .esco-chart {
+    height: $esco-chart-height;
+
+    .row {
+      fill: black;
+    }
+  }
+
+  .gender-chart-container,
+  .age-chart-container,
+  .season-chart-container {
+    width: 200px;
+    height: 200px;
+    margin: 10px 5%;
+  }
+
+  .season-chart,
+  .age-char,
+  .gender-chart {
+    .pie-label {
+      font-size: 16px;
+      fill: black;
+    }
+  }
+
+  .season-chart,
+  .age-chart {
+    .pie-label {
+      font-size: 16px !important;
+      fill: black;
+    }
+  }
+
+  .gender-chart {
+    .pie-label {
+      font-size: 22px;
+      fill: black;
+    }
+  }
+
+  .timeline {
+    height: $timeline-height;
+
+    .brush {
+      .extent {
+        fill: lighten($bar-color, 5%);
+      }
+   }
+
+    .bar {
+      fill: darken($bar-color, 20%);
+
+      &.deselected {
+        fill: $bar-color;
+      }
+    }
+  }
+
+  .content-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    width: $initial-content-width;
+  }
+
+  .content {
+    padding: 0 5px 30px 10px;
+    border-right: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    dt {
+      margin-top: 10px;
+    }
+
+    .chart-side-text {
+      padding: 30px 20px 0;
+    }
+
+    .content-image {
+      margin-right: 20px;
+    }
+  }
+
+  &.demo {
+    .nut-chart-container,
+    .nut-chart,
+    .timeline-container,
+    .timeline,
+    .esco-chart-container,
+    .esco-chart {
+      border: 1px solid lightgrey;
+    }
+
+    .map {
+      background: rgba(224, 255, 255, 0.8) image_url('placeholder/world-map.svg') center/contain no-repeat;
+    }
+
+    .timeline {
+      border: 1px solid MediumSeaGreen;
+      background: rgba(60, 179, 113, 0.8) image_url('placeholder/bar-chart.png') center/contain no-repeat;
+    }
+
+    .season-chart,
+    .gender-chart,
+    .esco-chart,
+    .nut-chart {
+      border: 1px solid SlateGrey;
+      background: rgba(112, 128, 144, 0.8) image_url('placeholder/chart.png') center/contain no-repeat;
+    }
+
+  }
+}
+
+@mixin fixed-reset-button($initial-content-width: 60vw) {
+  position: fixed;
+  top: 0;
+  left: $initial-content-width;
+}
+
+#benchinfo { // sass-lint:disable-line no-ids
+  font-family: monospace;
+}
+
+#report_1 { // sass-lint:disable-line no-ids
+  @include report(
+    $nut-chart-height: 200px,
+    $esco-chart-height: 300px,
+    $timeline-height: 200px,
+    $bar-color: #8ad,
+    $initial-content-width: 60%
+  );
+
+  #fixed-reset-button { // sass-lint:disable-line no-ids
+    @include fixed-reset-button($initial-content-width: 60%);
+  }
+}
+
+#report_2 { // sass-lint:disable-line no-ids
+  @include report(
+    $nut-chart-height: 550px,
+    $esco-chart-height: 300px,
+    $timeline-height: 200px,
+    $bar-color: #8ad,
+    $initial-content-width: 40%
+  );
+
+  #fixed-reset-button { // sass-lint:disable-line no-ids
+    @include fixed-reset-button($initial-content-width: 40%);
+  }
+}

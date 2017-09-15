@@ -1,7 +1,7 @@
 window.loading =
   start: (msg) ->
     $('#loading-wrapper').remove()
-    $('body').prepend(
+    $('body').append(
       "<div id='loading-wrapper'>
       <p class='loading-message'>#{msg}</p>
       <div id='loading'></div>

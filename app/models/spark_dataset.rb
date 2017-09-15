@@ -78,8 +78,8 @@ class SparkDataset < Dataset
 
     puts sql.yellow
 
-    jar= "/home/panos/Work/bigdata/eurostat/target/scala-2.11/eurostat.jar"
-    cmd = "spark-submit --master local[4] '#{jar}' '#{uri}' \"#{sql}\""
+    jar = Rails.root.join 'vendor', 'eurostat.jar'
+    cmd = "spark-submit --master local[4] '#{jar}' '#{name}' '#{uri}' \"#{sql}\""
 
     puts cmd.red
 

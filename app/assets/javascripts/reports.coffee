@@ -14,12 +14,14 @@ interact('.resizable')
     top: false)
 .on 'resizemove', (event) ->
   target = event.target
-  x = parseFloat(target.getAttribute('data-x')) or 0
-  y = parseFloat(target.getAttribute('data-y')) or 0
+  width = event.rect.width + 'px'
 
   # update the element's style
-  target.style.width = event.rect.width + 'px'
-  target.style.height = event.rect.height + 'px'
+  target.style.width = width
+
+  # update the position of the fixed reset button
+  document.getElementById('fixed-reset-button').style.left = width
 .on 'resizeend', (event) ->
+
   # send a window resize event so charts rerender themselves
   window.dispatchEvent new Event('resize')

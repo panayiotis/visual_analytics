@@ -12,17 +12,18 @@ import queryString from 'query-string'
 import sizeof from 'object-sizeof'
 
 #TODO: replace d3.* functions with their imported counterparts
-export default class Cedefop
+export default class Eures
   constructor: (element_data) ->
-    console.log 'Cedefop: create'
+    console.log 'Eures: create'
     params = queryString.parse(location.search)
-    console.log("Cedefop: params: ", params)
+    console.log("Eures: params:",params)
     @bench = []
     @data=null
     @data_uri=element_data.data_uri + location.search
     @geojson=null
     @geojson_uri=element_data.geojson_uri
     console.log @geojson_uri
+
     @id=element_data.id
 
     loading.start('getting data from Apache Spark...')
@@ -32,12 +33,13 @@ export default class Cedefop
     .defer json, @geojson_uri
     .await (error, data, geojson) =>
       if error
-        console.error "cedefop: can not get data"
+        console.error "eures: can not get data"
       else
         timeb = new Date().getTime()
         loading.stop()
         @data = data
         @geojson = geojson
+        console.log @geojson
         @render()
 
         formatNumber = d3.format(".3s")
@@ -94,8 +96,19 @@ export default class Cedefop
 
     # filter data before 2015
     # TODO: filtering should be done in the dataset
-    d2015 = new Date(Date.UTC(2015, 3))
-    @data.rows = @data.rows.filter (d) -> d.date >= d2015
+    #d2015 = new Date(Date.UTC(2015, 3))
+    #@data.rows = @data.rows.filter (d) -> d.date >= d2015
+    #@data.rows = @data.rows.filter (d) -> d.nut == 'IT'
+    @data.rows = @data.rows.map (d) ->
+      if d.nut == 'EL'
+        d.nut = 'GR'
+        d
+      else if d.nut == 'UK'
+        d.nut = 'GB'
+        d
+      else
+        d
+
 
     #### Extract time domain
     timeDomain = @data.rows.reduce (acc,val) ->
@@ -111,14 +124,20 @@ export default class Cedefop
     escoChart = dc.rowChart "#{element} .esco-chart", groupname
     nutChart = dc.rowChart "#{element} .nut-chart", groupname
     seasonChart = dc.pieChart "#{element} .season-chart", groupname
+    genderChart = dc.pieChart "#{element} .gender-chart", groupname
+    ageChart = dc.pieChart "#{element} .age-chart", groupname
     timelineChart = dc.barChart "#{element} .timeline", groupname
 
     #### Create crossfilter dimensions and groups
     xf = crossfilter(@data.rows)
+    ageDimension = xf.dimension (d) -> d.age_group
+    ageGroup = ageDimension.group().reduceSum (d) -> d.count
     dateDimension = xf.dimension (d) -> d.date
     dateGroup = dateDimension.group().reduceSum (d) -> d.count
     escoDimension = xf.dimension (d) -> d.esco
     escoGroup = escoDimension.group().reduceSum (d) -> d.count
+    genderDimension = xf.dimension (d) -> d.gender
+    genderGroup = genderDimension.group().reduceSum (d) -> d.count
     nutDimension = xf.dimension (d) -> d[nut_field]
     nutGroup = nutDimension.group().reduceSum (d) -> d.count
     seasonDimension = xf.dimension (d) -> d.season
@@ -163,6 +182,7 @@ export default class Cedefop
     .margins { top: 10, right: 10, bottom: 20, left: 30 }
     .dimension nutDimension
     .group nutGroup
+    .cap 20
     .colorAccessor (d, i) -> d.value
     .colors colors
     .elasticX true
@@ -177,7 +197,7 @@ export default class Cedefop
       chart.selectAll 'g.row'
       .append 'image'
       .attr 'xlink:href', (d) ->
-        "/flags/4x3/#{codes_map[d.key].toLowerCase()}.svg"
+        "/flags/4x3/#{d.key.toLowerCase()}.svg"
       .attr 'x',-28
       .attr 'y',barHeight/2 - 10
       .attr 'height', 20
@@ -187,6 +207,7 @@ export default class Cedefop
     seasonChart
     .dimension seasonDimension
     .group seasonGroup
+    .innerRadius 35
     .colorAccessor (d, i) -> i
     .colors d3.scale.ordinal().range([
       d3.rgb("#fee08b") #autumn
@@ -194,6 +215,27 @@ export default class Cedefop
       d3.rgb("#e6f598") #summer
       d3.rgb("#74add1") #winter
     ])
+    .transitionDuration 500
+
+    #### Gender chart
+    genderChart
+    .dimension genderDimension
+    .group genderGroup
+    .innerRadius 35
+    .colorAccessor (d, i) -> i
+    .colors d3.scale.ordinal().range([
+      d3.rgb("#f4a582") #female
+      d3.rgb("#74add1") #male
+    ])
+    .transitionDuration 500
+
+    #### Age chart
+    ageChart
+    .dimension ageDimension
+    .group ageGroup
+    .innerRadius 35
+    .colorAccessor (d, i) -> i
+    .colors d3.scale.ordinal().range(colorbrewer.Spectral[4])
     .transitionDuration 500
 
     #### Esco chart
@@ -253,7 +295,7 @@ export default class Cedefop
     .colors(colors)
     .colorAccessor (d, i) -> d.value
     .calculateColorDomain() # must be called after colors and colorAccessor
-    .featureKeyAccessor (feature) -> names_map[feature.properties.name]
+    .featureKeyAccessor (feature) -> feature.properties.iso_a2
     .featureOptions (feature) ->
       fillColor: 'white'
       color: 'grey',
@@ -262,7 +304,7 @@ export default class Cedefop
       weight: 1
     .geojson @geojson
     .legend(dc_leaflet.legend().position('topright'))
-    .zoom 4
+    .zoom 3
     .on 'preRedraw', (chart) -> chart.calculateColorDomain()
     .on 'postRender', (chart) ->
       # Leaflet makes map responsive with the trackResize option
@@ -271,12 +313,14 @@ export default class Cedefop
       chart.select('.dc-leaflet').style('height', '100%')
 
     #### Render charts
-    console.log "Cedefop: Render"
+    console.log "Eures: Render"
     choroplethChart.render()
+    ageChart.render()
     nutChart.render()
     escoChart.render()
     timelineChart.render()
     seasonChart.render()
+    genderChart.render()
 
     #### Add Reset Button event
     $("#{element} .reset.button").on 'click',(event) ->
@@ -292,28 +336,12 @@ export default class Cedefop
       escoChart.render()
       timelineChart.render()
       seasonChart.render()
+      genderChart.render()
+      ageChart.render()
       # map chart is already responsive
     document.addEventListener 'turbolinks:before-render', ->
-      console.log "Cedefop: Teardown"
+      console.log "Eures: Teardown"
       choroplethChart.map().remove()
       $("#{element} .map-container").empty()
       $("#{element} .map-container").append("<div class='map'></div>")
       dc.chartRegistry.clear groupname
-
-# TODO: dataset should have an iso country identifier
-names_map = {
-  "United Kingdom": "UNITED KINGDOM"
-  "Germany":  "DEUTSCHLAND"
-  "Italy": "ITALIA"
-  "Czech Rep.": "ČESKÁ REPUBLIKA"
-  "Ireland": "IRELAND"
-}
-
-# TODO: dataset should have an iso country identifier
-codes_map = {
-  "UNITED KINGDOM": "GB"
-  "DEUTSCHLAND": "DE"
-  "ITALIA": "IT"
-  "ČESKÁ REPUBLIKA":"CZ"
-  "IRELAND":"IE"
-}

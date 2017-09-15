@@ -1,14 +1,14 @@
 :ruby
   data = {
-    component: 'cedefop',
-    id: "cedefop-#{rand(100)}",
-    data_uri: dataset_path(1, format: :json),
-    geojson_uri: "/data/europe.geojson"
+    component: 'eures',
+    id: "eures-#{rand(100)}",
+    data_uri: dataset_path(2, format: :json),
+    geojson_uri: "/data/world.geojson"
   }
 
 #loading-wrapper
   %p.loading-message
-    loading cedefop component
+    loading eures component
   #loading
 
 %div[@report]
@@ -21,7 +21,7 @@
     .content-container.resizable
       .content
         .clearfix
-          %h1 Vacancies Report
+          %h1 Unemployment Report
         .clearfix
           .timeline-container
             .timeline
@@ -32,10 +32,15 @@
         .clearfix
           .season-chart-container.float-left
             .season-chart
+          .gender-chart-container.float-left
+            .gender-chart
+          .age-chart-container.float-left
+            .age-chart
         %table.hover
           %thead
             %tr
               %th metric
               %th value
           %tbody#benchinfo
-    %a#fixed-reset-button.reset.button reset filters
+    %a#fixed-reset-button.button.reset reset filters
+

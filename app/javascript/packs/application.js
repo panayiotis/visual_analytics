@@ -11,6 +11,7 @@ console.log('Hello World from Webpacker')
 
 //import FetchData from 'visualization/fetch_data'
 import Cedefop from 'cedefop'
+import Eures from 'eures'
 
 var setup = () =>{
   var nodes = document.getElementsByClassName("cedefop-component");
@@ -19,6 +20,14 @@ var setup = () =>{
     var data = JSON.parse(node.getAttribute("data"));
     console.log("data");
     new Cedefop(data);
+  }
+  
+  nodes = document.getElementsByClassName("eures-component");
+
+  for (var node of nodes) {
+    var data = JSON.parse(node.getAttribute("data"));
+    console.log("data");
+    new Eures(data);
   }
 }
 
@@ -49,14 +58,3 @@ document.addEventListener('turbolinks:render', function(event){
 
 //document.addEventListener('turbolinks:render', setup())
 //document.addEventListener('turbolinks:before-render', teardown())
-
-//var fd = new FetchData();
-
-// establish event listener
-//document.addEventListener('data_fetched', function (e) {
-  // run visualization
-//  new Visualization(fd.data, fd.geojson);
-//}, false);
-
-// fetch data
-//fd.fetch();
