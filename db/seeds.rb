@@ -8,8 +8,8 @@
 #
 Report.create name: "Vacancies", short_name: "vacancies"
 Report.create name: "Unemployment", short_name: "unemployment"
-#Report.create name: "Mobility", short_name: "mobility"
-#Report.create name: "Public Integrity Report", short_name: "public_integrity_report"
+Report.create name: "Cedefop heatmap", short_name: "cedefop_heatmap"
+Report.create name: "Cedefop heatmap sample", short_name: "cedefop_heatmap_sample"
 
 # Cedefop SparkDataset
 schema = '[
