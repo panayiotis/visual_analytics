@@ -79,11 +79,11 @@ class SparkDataset < Dataset
     puts sql.yellow
 
     jar = Rails.root.join 'vendor', 'eurostat.jar'
-    cmd = "spark-submit --master local[4] '#{jar}' '#{name}' '#{uri}' \"#{sql}\""
+    cmd = "spark-submit --master local[1] '#{jar}' '#{name}' '#{uri}' \"#{sql}\""
 
     puts cmd.red
 
-    out = Rails.cache.fetch( "#{name}:#{sql}", expires_in: 12.hours ) do
+    out = Rails.cache.fetch( "#{name}:#{sql}", expires_in: 1.week ) do
       out, err, st = Open3.capture3(cmd)
       if out.empty?
         raise StandardError, "Spark error", err.to_s
