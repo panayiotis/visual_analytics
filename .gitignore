@@ -24,3 +24,8 @@
 /public/packs
 /public/packs-test
 /node_modules
+
+# Keep datasets out of version control
+# some are private and some are big
+/app/assets/data/*
+!/app/assets/data/.keep
