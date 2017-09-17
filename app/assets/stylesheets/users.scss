@@ -1,0 +1,52 @@
+// Place all the styles related to the users and sessions controllers here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body[data-controller='devise/sessions'][data-action='new'] {
+  //min-height: 100vh;
+  background: black;
+  color: white;
+
+  h1 {
+    margin: 20px auto;
+    font-size: 40px;
+  }
+
+  label {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .field {
+    margin-bottom: 25px;
+    line-height: 40px;
+    width: 100%;
+  }
+
+  input[type='password'],
+  input[type='text'] {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .sign_in {
+    width: 350px;
+    margin: 20vh auto 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px 50px;
+
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+    background: image_url('loading_background.jpg') center/cover no-repeat;
+    content: '';
+  }
+}

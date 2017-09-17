@@ -40,6 +40,9 @@ gem 'pandoc-ruby'
 gem 'forgery'
 # Use awesome_print to pretty print objects
 gem 'awesome_print'
+gem 'colored'
+# Use devise for authentication
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170912202615) do
+ActiveRecord::Schema.define(version: 20170917003519) do
 
   create_table "datasets", force: :cascade do |t|
     t.string "type"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 20170912202615) do
     t.string "attribution"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
 
 end

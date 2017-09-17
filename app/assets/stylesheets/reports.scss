@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+body[data-controller='reports'][data-action='index'] {
+  h1 {
+    margin: 40px auto;
+  }
+}
+
 @mixin report(
   $nut-chart-height: 200px,
   $esco-chart-height: 300px,

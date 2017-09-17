@@ -43,3 +43,5 @@ schema = '[
 uri="/var/data/eures/data.parquet"
 
 SparkDataset.create name: "eures", description: "eures", uri: uri, schema_json: schema
+
+User.create name: "cedefop", password: "thessaloniki"
