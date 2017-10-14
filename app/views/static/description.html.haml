@@ -1,0 +1,110 @@
+.row.description
+  .large-12.columns
+    %h1 Big Data Visual Analytics
+    %h2 System Architecture
+    %br
+    %br
+    .text-center
+      =image_tag "system-architecture.svg"
+    :markdown
+      ## Intro
+
+      These days it seems that the rational way to do data-science on Big Data is
+      either spark-shell or a notebook system
+      like Apache Zeppelin, Jupyter and something like databricks.com.
+    %p
+      =image_tag "screenshot-01.png", width: 400,class: 'float-left'
+      These notebooks allow the user to embed charts inside the code
+      and charts are redrawn when the code changes.
+    %p
+      However this means that in order to explore a dataset visually the user
+      has to write code again and again in order for the charts to get redrawn
+      with the data he wants.
+    :markdown
+
+      What I am proposing is a platform for visual analytics that is
+      used complementary to the notebook incremental development workflow and
+      provides a better way to explore data visually.
+
+      Instead of rendering static charts, it sends to the user's
+      browser as much data as it can visualize easily (~100000)
+      rows and allows enhanced interactivity on this portion of data without contacting
+      the server.
+
+      The platform has three key characteristics
+
+      1. It focuses on data with hierarchical features, e.g.: country / city / street.
+      It restricts user to exploring a specific portion of the data each time.
+      For example the user can see at once:
+
+      * data for all countries,
+      * or data for all cities of the same country,
+      * or data for all streets of the same city.
+
+      2. The Javascript visualization gets a portion of the data
+      and for this portion of the data the user is allowed to perform
+      filtering operations without contacting the server. When the user
+      requests another piece of the data, then it contacts the server.
+
+      3. The data-scientist is "controlling" how much data is sent to the
+      browser by tuning the granularity of the features. For example if
+      the data has a date-time feature, by changing the granularity from
+      day to month or quarter has great impact on the data size that is going
+      to be sent to the browser.
+
+      ## Data
+      Type of features:
+
+      * Date Time
+      * Hierarchical geographical
+      * Hierarchical
+      * Discrete
+
+      The system is focused on visualizing big data with *hierarchical features*.
+
+      For example, the feature *location* has the hierarchy:
+      country / city / street
+
+      The feature *occupation* can follow the hierarchy described by
+      [eu esco classification](https://ec.europa.eu/esco/portal) and is 4 levels deep.
+      A subtree of occupation is:
+      Professionals / Science and engineering professionals / Life science professionals / Farming forestry and fisheries advisers
+
+      An example of a discrete feature *gender*, with values male and female
+
+      Continuous features have to be converted to discrete features.
+      For example the values for an *age* feature that are integers 1 to 110 can
+      be mapped to 4 discrete values: 'up to 18', '19 to 29','30 to 40', 'over 40'
+
+      ## Web App
+
+      The web app is standing as a proxy between the javascript visualization
+      and Apache Spark.
+      It offers a REST API to Apache Spark, authentication and more importantly
+      caching of the results
+      There are two modes that it can be run, development and production
+
+      #### Development environment
+
+      Development environment means that the data-scientist is viewing the
+      visualization while performing changes to the underlying dataset.
+      This means that the web application is querying Apache Spark to get the
+      results.
+
+      #### Production environment
+
+      As the data-scientist figures out which are the best features to visualize
+      (feature engineering, feature granularity),
+      there is less time spend on changing the underlying dataset
+      and more time spend on the exploration of the dataset.
+
+      In this phase it is possible to *cache* all the results from Apache Spark
+      and remove the need to contact it thus greatly improving response time.
+
+      ## JS Visualization
+
+      JS visualization allows the user to perform interactive filtering
+      on the data that has got from the Web application.
+    .text-center
+      =image_tag "screenshot-02.png", width: 400
+      =image_tag "screenshot-03.png", width: 400

@@ -1,3 +1,17 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.description {
+  padding-bottom: 3rem;
+  font-size: 1.2rem;
+  text-align: justify;
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  img {
+    margin: 0.5rem 1rem 0 0;
+  }
+}

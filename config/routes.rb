@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/geojson/:dataset/:level/:like', to: 'geojson#show', constraints: { format: 'json' }
   get 'components', to: 'components#index'
   get 'components/:action', to:  'components#:action'
+  get 'description', to:  'static#description'
   get 'layout', to:  'static#layout'
   resources :datasets
   resources :reports
