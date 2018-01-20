@@ -7,7 +7,15 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
-Rails.application.config.assets.paths << Dir.new('/var/data/assets')
+
+big_assets_dir = '/var/data/assets'
+
+unless File.directory?(big_assets_dir)
+  STDERR.puts "#{big_assets_dir} directory is missing".red
+  raise "#{big_assets_dir} directory is missing"
+end
+
+Rails.application.config.assets.paths << Dir.new(big_assets_dir)
 Rails.application.config.assets.precompile = [
   Proc.new { |filename, path|
     path =~ /(app\/assets)|(var\/data\/assets)/ &&
