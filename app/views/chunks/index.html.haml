@@ -1,0 +1,27 @@
+%h1 Listing chunks
+
+%table
+  %thead
+    %tr
+      %th Code
+      %th Code base64
+      %th Size
+      %th Report
+      %th
+      %th
+      %th
+
+  %tbody
+    - @chunks.each do |chunk|
+      %tr
+        %td= chunk.code
+        %td= chunk.code_base64
+        %td= chunk.size
+        %td= chunk.report
+        %td= link_to 'Show', chunk
+        %td= link_to 'Edit', edit_chunk_path(chunk)
+        %td= link_to 'Destroy', chunk, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Chunk', new_chunk_path

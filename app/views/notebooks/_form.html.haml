@@ -1,0 +1,28 @@
+= form_for @notebook do |f|
+  - if @notebook.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@notebook.errors.count, "error")} prohibited this notebook from being saved:"
+      %ul
+        - @notebook.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :public
+    = f.check_box :public
+  .field
+    = f.label :adapter
+    = f.text_field :adapter
+  .field
+    = f.label :pack
+    = f.text_field :pack
+  .field
+    = f.label :state
+    = f.text_area :state
+  .field
+    = f.label :user
+    = f.text_field :user
+  .actions
+    = f.submit 'Save'

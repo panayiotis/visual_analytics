@@ -1,0 +1,22 @@
+= form_for @chunk do |f|
+  - if @chunk.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@chunk.errors.count, "error")} prohibited this chunk from being saved:"
+      %ul
+        - @chunk.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :code
+    = f.text_area :code
+  .field
+    = f.label :code_base64
+    = f.text_area :code_base64
+  .field
+    = f.label :size
+    = f.number_field :size
+  .field
+    = f.label :report
+    = f.text_field :report
+  .actions
+    = f.submit 'Save'

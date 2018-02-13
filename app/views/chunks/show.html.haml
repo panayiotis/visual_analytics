@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Code:
+  = @chunk.code
+%p
+  %b Code base64:
+  = @chunk.code_base64
+%p
+  %b Size:
+  = @chunk.size
+%p
+  %b Report:
+  = @chunk.report
+
+= link_to 'Edit', edit_chunk_path(@chunk)
+\|
+= link_to 'Back', chunks_path
