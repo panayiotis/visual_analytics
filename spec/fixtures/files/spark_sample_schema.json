@@ -1,0 +1,101 @@
+{  
+   "type":"struct",
+   "fields":[  
+      {  
+         "name":"reported_by",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"falls_within",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"crime_type_level_2",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"last_outcome_category",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"date_month",
+         "type":"date",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"nuts_3",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"nuts_2",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"nuts_1",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"nuts_0",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"quarter",
+         "type":"integer",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"date_year",
+         "type":"date",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      },
+      {  
+         "name":"crime_type_level_1",
+         "type":"string",
+         "nullable":true,
+         "metadata":{  
+
+         }
+      }
+   ]
+}

@@ -12,11 +12,11 @@ RSpec.describe LivyDaemonJob, type: :job do
   end
 
   it 'resets the redis livy key if status changes' do
-    $redis.set('livy', {}.to_json)
+    Redis.current.set('livy', {}.to_json)
     LivyDaemonJob.perform_now(daemon: false)
-    $redis.set('livy', {}.to_json)
+    Redis.current.set('livy', {}.to_json)
     LivyDaemonJob.perform_now(daemon: false)
-    livy_status = JSON.parse($redis.get('livy'), symbolize_names: true)
+    livy_status = JSON.parse(Redis.current.get('livy'), symbolize_names: true)
     expect(livy_status).to include(:from, :total, :sessions)
   end
 end

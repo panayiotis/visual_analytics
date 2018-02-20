@@ -1,0 +1,1 @@
+{"id":12,"code":"print(spark.sql(\"SELECT crime_type, year, nuts, COUNT(*) AS count FROM asb GROUP BY crime_type, year, nuts\").coalesce(1).toJSON.collect().mkString(\"[\\n  \",\",\\n  \",\"\\n]\"))","state":"waiting","output":null,"progress":0.0}
