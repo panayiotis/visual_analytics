@@ -1,7 +1,7 @@
 namespace :livy_daemon do
-  desc "TODO"
+  desc 'TODO'
   task start: :environment do
-    puts "Start Livy Daemon job"
+    puts 'Start Livy Daemon job'
     LivyDaemonJob.perform_now
   end
 end

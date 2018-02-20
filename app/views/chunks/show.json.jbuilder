@@ -1,1 +1,1 @@
-json.partial! "chunks/chunk", chunk: @chunk
+json.partial! 'chunks/chunk', chunk: @chunk

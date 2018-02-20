@@ -1,6 +1,10 @@
 AllCops:
+  TargetRubyVersion: 2.4
+  TargetRailsVersion: 5.2
+  ExtraDetails: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
   Exclude:
-    - Gemfile
     - bin/*
     - config/**/*
     - db/**/*
@@ -10,40 +14,38 @@ AllCops:
 Rails:
   Enabled: true
 
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: false
+
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
     - spec/**/*
 
-Layout/LeadingCommentSpace:
-  Enabled: false
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
 
-Layout/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-Lint/AssignmentInCondition:
-  Enabled: false
-
-Lint/UnusedBlockArgument:
-  Enabled: false
-
-Lint/UselessAssignment:
-  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
 
 Metrics/AbcSize:
   Enabled: false
 
 Metrics/BlockLength:
-  Enabled: false
+  Exclude:
+    - Guardfile
+    - spec/**/*
 
 Metrics/LineLength:
-  Enabled: false
+  Enabled: true
+  Max: 80
+  AllowURI: true
 
-Style/BlockComments:
-  Enabled: false
+Metrics/MethodLength:
+  Max: 20
 
 Style/BlockDelimiters:
   Exclude:
-    - spec/**/*
+    - app/controllers/**/*
 
 Style/Documentation:
   Enabled: false
@@ -53,13 +55,4 @@ Style/EmptyMethod:
     - app/controllers/**/*
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Style/HashSyntax:
-  Enabled: false
-
-Style/RegexpLiteral:
-  Enabled: false
-  
-Style/StringLiterals:
   Enabled: false

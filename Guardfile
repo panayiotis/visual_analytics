@@ -23,8 +23,8 @@ guard 'livereload' do
     css: :css,
     scss: :css,
     sass: :css,
-    #js: :js,         # js is reloaded by webpack-dev-server
-    #coffee: :coffee, # coffee is reloaded by webpack-dev-server
+    # js: :js,         # js is reloaded by webpack-dev-server
+    # coffee: :coffee, # coffee is reloaded by webpack-dev-server
     html: :html,
     png: :png,
     gif: :gif,
@@ -58,26 +58,29 @@ guard 'livereload' do
 end
 
 guard :rspec, cmd: 'spring rspec' do
-  watch('spec/spec_helper.rb') { "spec" }
-  watch('config/routes.rb') { "spec/routing" }
-  watch('app/controllers/application_controller.rb') { "spec/controllers" }
+  watch('spec/spec_helper.rb') { 'spec' }
+  watch('config/routes.rb') { 'spec/routing' }
+  watch('app/controllers/application_controller.rb') { 'spec/controllers' }
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^app/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
   watch(%r{^app/(.*)(\.erb|\.haml)$}) { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
   watch(%r{^lib/(.+)\.rb$}) { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch(%r{^app/controllers/(.+)_(controller)\.rb$}) do |m|
-    ["spec/routing/#{m[1]}_routing_spec.rb",
-     "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb",
-     "spec/acceptance/#{m[1]}_spec.rb"]
+    [
+      "spec/routing/#{m[1]}_routing_spec.rb",
+      "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb",
+      "spec/acceptance/#{m[1]}_spec.rb"
+    ]
   end
 end
 
 opts = {
   src_path: %w[app lib],
-  project_file: ".tags",
-  bundler_tags_file: ".gems.tags"
+  project_file: '.tags',
+  bundler_tags_file: '.gems.tags'
 }
+
 guard 'ctags-bundler', opts do
-  watch(/^(app|lib)\/.*\.rb$/)
+  watch(%r{^(app|lib)/.*\.rb$})
   watch('Gemfile.lock')
 end

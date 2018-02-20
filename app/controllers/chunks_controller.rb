@@ -28,11 +28,15 @@ class ChunksController < ApplicationController
 
     respond_to do |format|
       if @chunk.save
-        format.html { redirect_to @chunk, notice: 'Chunk was successfully created.' }
+        format.html {
+          redirect_to @chunk, notice: 'Chunk was successfully created.'
+        }
         format.json { render :show, status: :created, location: @chunk }
       else
         format.html { render :new }
-        format.json { render json: @chunk.errors, status: :unprocessable_entity }
+        format.json {
+          render json: @chunk.errors, status: :unprocessable_entity
+        }
       end
     end
   end
@@ -42,11 +46,15 @@ class ChunksController < ApplicationController
   def update
     respond_to do |format|
       if @chunk.update(chunk_params)
-        format.html { redirect_to @chunk, notice: 'Chunk was successfully updated.' }
+        format.html {
+          redirect_to @chunk, notice: 'Chunk was successfully updated.'
+        }
         format.json { render :show, status: :ok, location: @chunk }
       else
         format.html { render :edit }
-        format.json { render json: @chunk.errors, status: :unprocessable_entity }
+        format.json {
+          render json: @chunk.errors, status: :unprocessable_entity
+        }
       end
     end
   end
@@ -56,20 +64,23 @@ class ChunksController < ApplicationController
   def destroy
     @chunk.destroy
     respond_to do |format|
-      format.html { redirect_to chunks_url, notice: 'Chunk was successfully destroyed.' }
+      format.html {
+        redirect_to chunks_url, notice: 'Chunk was successfully destroyed.'
+      }
       format.json { head :no_content }
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_chunk
-    @chunk = Chunk.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_chunk
+      @chunk = Chunk.find(params[:id])
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def chunk_params
-    params.require(:chunk).permit(:code, :code_base64, :size, :report_id)
-  end
+    # Never trust parameters from the scary internet, only allow the white list
+    # through.
+    def chunk_params
+      params.require(:chunk).permit(:code, :code_base64, :size, :report_id)
+    end
 end

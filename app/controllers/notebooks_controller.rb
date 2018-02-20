@@ -28,11 +28,15 @@ class NotebooksController < ApplicationController
 
     respond_to do |format|
       if @notebook.save
-        format.html { redirect_to @notebook, notice: 'Notebook was successfully created.' }
+        format.html {
+          redirect_to(@notebook, notice: 'Notebook was successfully created.')
+        }
         format.json { render :show, status: :created, location: @notebook }
       else
         format.html { render :new }
-        format.json { render json: @notebook.errors, status: :unprocessable_entity }
+        format.json {
+          render json: @notebook.errors, status: :unprocessable_entity
+        }
       end
     end
   end
@@ -42,11 +46,15 @@ class NotebooksController < ApplicationController
   def update
     respond_to do |format|
       if @notebook.update(notebook_params)
-        format.html { redirect_to @notebook, notice: 'Notebook was successfully updated.' }
+        format.html {
+          redirect_to @notebook, notice: 'Notebook was successfully updated.'
+        }
         format.json { render :show, status: :ok, location: @notebook }
       else
         format.html { render :edit }
-        format.json { render json: @notebook.errors, status: :unprocessable_entity }
+        format.json {
+          render json: @notebook.errors, status: :unprocessable_entity
+        }
       end
     end
   end
@@ -56,20 +64,26 @@ class NotebooksController < ApplicationController
   def destroy
     @notebook.destroy
     respond_to do |format|
-      format.html { redirect_to notebooks_url, notice: 'Notebook was successfully destroyed.' }
+      format.html {
+        redirect_to(
+          notebooks_url, notice: 'Notebook was successfully destroyed.'
+        )
+      }
       format.json { head :no_content }
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_notebook
-    @notebook = Notebook.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_notebook
+      @notebook = Notebook.find(params[:id])
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def notebook_params
-    params.require(:notebook).permit(:name, :public, :adapter, :pack, :state, :user_id)
-  end
+    # Never trust parameters from the scary internet, only allow the white
+    # list through.
+    def notebook_params
+      params.require(:notebook)
+        .permit(:name, :public, :adapter, :pack, :state, :user_id)
+    end
 end
