@@ -1,0 +1,5 @@
+= content_for :head do
+  = javascript_pack_tag 'visual_analytics'
+:ruby
+  data = {hello: 'data from rails'}
+#app-root{data: data.to_json}

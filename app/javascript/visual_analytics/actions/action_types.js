@@ -1,0 +1,1 @@
+export const A_REDUX_ACTION = 'A_REDUX_ACTION'
