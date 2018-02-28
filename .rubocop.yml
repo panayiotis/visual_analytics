@@ -20,12 +20,16 @@ Layout/EmptyLinesAroundAccessModifier:
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
     - spec/**/*
+    - lib/tasks/**/*
 
 Layout/IndentationConsistency:
   EnforcedStyle: rails
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
+
+Lint/UnusedBlockArgument:
+  Enabled: false
 
 Metrics/AbcSize:
   Enabled: false
@@ -34,6 +38,7 @@ Metrics/BlockLength:
   Exclude:
     - Guardfile
     - spec/**/*
+    - lib/tasks/**/*
 
 Metrics/LineLength:
   Enabled: true

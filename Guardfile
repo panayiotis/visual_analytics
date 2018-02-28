@@ -23,8 +23,8 @@ guard 'livereload' do
     css: :css,
     scss: :css,
     sass: :css,
-    # js: :js,         # js is reloaded by webpack-dev-server
-    # coffee: :coffee, # coffee is reloaded by webpack-dev-server
+    js: :js,         # js is reloaded by webpack-dev-server
+    coffee: :coffee, # coffee is reloaded by webpack-dev-server
     html: :html,
     png: :png,
     gif: :gif,
@@ -37,7 +37,7 @@ guard 'livereload' do
 
   # file types LiveReload may optimize refresh for
   compiled_exts = extensions.values.uniq
-  watch(%r{public/.+\.(#{compiled_exts * '|'})})
+  watch(%r{public/.+\.(#{compiled_exts * '|'})\z})
 
   extensions.each do |ext, type|
     watch(%r{
