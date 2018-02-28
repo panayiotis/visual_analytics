@@ -5,5 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 user = User.create(name: 'development', password: 'development')
-notebook = Notebook.create(name: 'development notebook', user: user)
+
+Notebook.create(
+  name: 'development notebook',
+  user: user,
+  adapter: 'livy',
+  pack: 'hello_react'
+)
+
+Notebook.create(
+  name: 'visual analytics notebook',
+  user: user,
+  adapter: 'livy',
+  pack: 'visual_analytics'
+)

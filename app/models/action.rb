@@ -1,11 +1,10 @@
 class Action
   attr_accessor :type, :payload, :error, :meta
 
-  def initialize(type: 'EMPTY', payload: nil, error: nil, meta: nil)
-    @type = type
-    @payload = payload
-    @error = error
-    @meta = meta
+  def initialize(args)
+    args.each do |k, v|
+      instance_variable_set("@#{k}", v) unless v.nil?
+    end
   end
 
   def to_h

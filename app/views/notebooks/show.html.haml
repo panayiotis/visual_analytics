@@ -1,24 +1,5 @@
-%p#notice= notice
+= content_for :head do
+  %meta{ name: 'turbolinks-visit-control', content: 'reload' }
+  = javascript_pack_tag @notebook.pack
 
-%p
-  %b Name:
-  = @notebook.name
-%p
-  %b Public:
-  = @notebook.public
-%p
-  %b Adapter:
-  = @notebook.adapter
-%p
-  %b Pack:
-  = @notebook.pack
-%p
-  %b State:
-  = @notebook.state
-%p
-  %b User:
-  = @notebook.user
-
-= link_to 'Edit', edit_notebook_path(@notebook)
-\|
-= link_to 'Back', notebooks_path
+#state{ data: @initial_redux_state.to_json }

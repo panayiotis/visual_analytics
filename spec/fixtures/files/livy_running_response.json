@@ -1,7 +1,7 @@
 {
   "id": 61,
   "code": "print(s\"\"\"{\n  \"schema\": ${spark.sql(\"SELECT * FROM view\").schema.json},\n  \"data\": [\n    ${spark.sql(\"SELECT view.nuts_1 AS nuts, view.date_year AS date, view.reported_by AS reported_by, view.crime_type_level_2 AS crime_type, COUNT(*) AS count FROM view WHERE view.nuts_0 = 'UK' AND view.nuts_2 = 'UKI6' AND view.date_year = '2016-01-01' GROUP BY view.nuts_1, view.date_year, view.reported_by, view.crime_type_level_2\").coalesce(1).toJSON.collect().mkString(\",\\n\")}\n  ]\n}\"\"\")\n",
-  "state": "waiting",
+  "state": "running",
   "output": null,
-  "progress": 0.0
+  "progress": 0.7
 }

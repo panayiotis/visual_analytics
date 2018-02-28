@@ -9,27 +9,28 @@ RSpec.describe LivyAdapter, type: :model do
     end
     responses.zip(files).to_h
   end
-  let(:request_action) do
-    {
-      'action' => 'request',
-      'type' => 'type...',
-      'payload' => build(:schema).to_h
-    }
-  end
+
+  let(:livy_schema) { build :livy_schema }
+  let(:adapter) { LivyAdapter.new }
 
   context 'simple select request' do
     it 'performs request' do
-      l = LivyAdapter.new
-      action = l.request(request_action)
-      expect(action.type).to match('STATEMENT_AVAILABLE')
+
+      action = adapter.request(livy_schema)
+      expect(action.type).to match('ENGINE_COMPUTATION')
+      expect(action.payload[:state]).to match('success')
       expect(action.last?).to be_truthy
     end
 
     it 'performs request with a block and parameter' do
-      l = LivyAdapter.new
+
       book = double('book')
-      expect(book).to receive(:hello).with(kind_of(Action)).at_least(:once)
-      l.request(request_action) { |action| book.hello(action) }
+      expect(book).to receive(:hello)
+        .with(kind_of(Action), anything, kind_of(String), anything)
+        .at_least(:once)
+      adapter.request(livy_schema) do |action, schema, sql, data|
+        book.hello(action, schema, sql, data)
+      end
     end
   end
 end

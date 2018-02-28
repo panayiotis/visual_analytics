@@ -1,4 +1,5 @@
 class NotebooksController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_notebook, only: %i[show edit update destroy]
 
   # GET /notebooks
@@ -10,6 +11,7 @@ class NotebooksController < ApplicationController
   # GET /notebooks/1
   # GET /notebooks/1.json
   def show
+    @initial_redux_state = @notebook.initial_redux_state
   end
 
   # GET /notebooks/new
@@ -84,6 +86,6 @@ class NotebooksController < ApplicationController
     # list through.
     def notebook_params
       params.require(:notebook)
-        .permit(:name, :public, :adapter, :pack, :state, :user_id)
+        .permit(:name, :public, :adapter, :pack, :state_json, :user_id)
     end
 end

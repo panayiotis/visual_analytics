@@ -33,6 +33,12 @@ class LivySchema < Schema
       .delete('"')
   end
 
+  def to_schema_json_sql
+    table.project(Arel.sql('*'))
+      .to_sql
+      .delete('"')
+  end
+
   def to_h
     fields.map { |f| [f.name.to_sym, f.to_h] }.to_h
   end

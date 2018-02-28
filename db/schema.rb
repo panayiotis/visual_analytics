@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 2018_02_14_141432) do
   end
 
   create_table "chunks", force: :cascade do |t|
-    t.text "code", null: false
     t.text "key", null: false
-    t.bigint "byte_size", null: false
+    t.text "code", null: false
+    t.bigint "byte_size"
+    t.bigint "computation_time"
     t.integer "notebook_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["key"], name: "index_chunks_on_key", unique: true
     t.index ["notebook_id"], name: "index_chunks_on_notebook_id"
   end
 
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_02_14_141432) do
     t.boolean "public"
     t.string "adapter"
     t.string "pack"
-    t.text "state"
+    t.text "state_json"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

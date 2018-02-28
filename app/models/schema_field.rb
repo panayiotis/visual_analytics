@@ -1,13 +1,5 @@
 class SchemaField
   class << self
-    def nuts?(name)
-      /^nuts_\d+/i =~ name
-    end
-
-    def date?(name)
-      /^date_.+/i =~ name
-    end
-
     def basename(name)
       case name
       when /^nuts_\d$/i
@@ -67,6 +59,14 @@ class SchemaField
 
   def hier?
     !level.nil?
+  end
+
+  def nuts?
+    name.to_s == 'nuts'
+  end
+
+  def date?
+    name.to_s == 'date'
   end
 
   def to_h

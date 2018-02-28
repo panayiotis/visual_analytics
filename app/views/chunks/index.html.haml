@@ -3,25 +3,23 @@
 %table
   %thead
     %tr
-      %th Code
-      %th Code base64
-      %th Size
-      %th Report
-      %th
-      %th
+      %th id
+      %th code
+      %th key
+      %th size
+      %th time
       %th
 
   %tbody
     - @chunks.each do |chunk|
       %tr
+        %td= chunk.id
         %td= chunk.code
-        %td= chunk.code_base64
-        %td= chunk.size
-        %td= chunk.report
-        %td= link_to 'Show', chunk
-        %td= link_to 'Edit', edit_chunk_path(chunk)
-        %td= link_to 'Destroy', chunk, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= chunk.key
+        %td= number_to_human_size(chunk.byte_size)
+        %td= number_to_human_seconds(chunk.computation_time)
+        %td= link_to 'Show', chunk_path(chunk)
 
 %br
 
-= link_to 'New Chunk', new_chunk_path
+=# link_to 'New Chunk', new_chunk_path

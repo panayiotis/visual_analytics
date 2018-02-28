@@ -1,18 +1,19 @@
 %p#notice= notice
-
+%p
+  %b Key:
+  = @chunk.key
 %p
   %b Code:
+%pre
   = @chunk.code
 %p
-  %b Code base64:
-  = @chunk.code_base64
-%p
   %b Size:
-  = @chunk.size
+  = @chunk.byte_size
 %p
-  %b Report:
-  = @chunk.report
-
-= link_to 'Edit', edit_chunk_path(@chunk)
-\|
-= link_to 'Back', chunks_path
+  %b Notebook:
+  = @chunk.notebook.id
+%p
+  %b Computation time:
+  = @chunk.computation_time
+%pre
+  = JSON.pretty_generate(JSON.parse(File.read(@chunk.path)))

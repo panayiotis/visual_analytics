@@ -21,10 +21,11 @@
         %td= notebook.adapter
         %td= notebook.pack
         %td= notebook.state
-        %td= notebook.user
-        %td= link_to 'Show', notebook
+        %td= notebook.user.name
+        %td= link_to 'Show', notebook, data: { turbolinks: 'false' }
         %td= link_to 'Edit', edit_notebook_path(notebook)
-        %td= link_to 'Destroy', notebook, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to 'Destroy',
+          notebook, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

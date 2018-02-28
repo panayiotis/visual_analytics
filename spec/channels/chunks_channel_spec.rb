@@ -32,17 +32,20 @@ RSpec.describe ChunksChannel do
   # ActionCable dispatches actions by the `action` attribute.
   # In this test we assume the payload was successfully parsed
   # (it could be a JSON payload, for example).
-  let(:action) do
+  let(:action_hash) do
     {
       'action' => 'request',
       'type' => 'type...',
-      'payload' => build(:schema).to_h
+      'payload' => {
+        'notebook' => { 'id' => 1 },
+        'schema' => build(:schema).to_h
+      }
     }
   end
 
   it 'broadcasts an Action to chunks_channel at least 3 times' do
     expect(action_cable).to receive(:broadcast)
       .with('chunks_channel', kind_of(Action)).at_least(3).times
-    channel.perform_action(action)
+    channel.perform_action(action_hash)
   end
 end

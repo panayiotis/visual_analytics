@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root to: 'notebooks#index'
 
   devise_for :users
-  resources :chunks
-  resources :geojson
+  resources :chunks, only: %i[index show], param: :key
+  resources :geojson, only: %i[index show]
   resources :notebooks
 
 end

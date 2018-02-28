@@ -5,7 +5,7 @@ class CreateNotebooks < ActiveRecord::Migration[5.2]
       t.boolean :public
       t.string :adapter
       t.string :pack
-      t.text :state
+      t.text :state_json
       t.references :user, foreign_key: true
 
       t.timestamps

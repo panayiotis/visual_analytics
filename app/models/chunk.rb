@@ -4,22 +4,37 @@ class Chunk < ApplicationRecord
   belongs_to :notebook
 
   before_validation do
-    self.key = Base64.urlsafe_encode64(code)
+    self.key = SecureRandom.uuid
   end
 
   before_save do
-    File.open(make_path, 'w') { |file| file.write(@blob) }
+    File.open(make_path, 'w') { |file| file.write(blob) }
+    Zlib::GzipWriter.open("#{path}.gz", Zlib::BEST_COMPRESSION) do |f|
+      f.write blob
+    end
+  end
+
+  after_destroy do
+    File.delete path
+  end
+
+  def to_param
+    key
   end
 
   def blob
-    @blob || File.read(path)
+    if @blob
+      @blob
+    elsif File.exist?(path)
+      @blob = File.read(path)
+    end
   end
 
   def path
     Rails.root.join(
       'storage',
       Rails.env.to_s,
-      key[0..1],
+      "notebook_#{notebook.id}",
       "#{key}.json"
     )
   end

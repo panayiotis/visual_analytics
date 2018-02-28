@@ -1,1 +1,0 @@
-{"id":1,"code":"hello","state":"available","output":{"status":"error","execution_count":1,"ename":"Error","evalue":"<console>:24: error: not found: value hello","traceback":["       hello\n","       ^\n"]},"progress":1.0}
