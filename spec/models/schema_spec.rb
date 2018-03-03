@@ -57,6 +57,7 @@ RSpec.describe Schema, type: :model do
         nuts_field = actual.fields.select(&:nuts?).first
         expect(nuts_field.levels).to contain_exactly('0', '1', '2', '3')
         expect(nuts_field.drill.size).to be == 4
+        expect(nuts_field.level).to be
       end
     end
   end

@@ -10,27 +10,35 @@ RSpec.describe LivyAdapter, type: :model do
     responses.zip(files).to_h
   end
 
-  let(:livy_schema) { build :livy_schema }
+  let(:code) { build(:livy_schema).to_code }
   let(:adapter) { LivyAdapter.new }
 
-  context 'simple select request' do
-    it 'performs request' do
-
-      action = adapter.request(livy_schema)
-      expect(action.type).to match('ENGINE_COMPUTATION')
-      expect(action.payload[:state]).to match('success')
-      expect(action.last?).to be_truthy
-    end
-
-    it 'performs request with a block and parameter' do
-
-      book = double('book')
-      expect(book).to receive(:hello)
-        .with(kind_of(Action), anything, kind_of(String), anything)
-        .at_least(:once)
-      adapter.request(livy_schema) do |action, schema, sql, data|
-        book.hello(action, schema, sql, data)
+  describe '.request' do
+    context 'with the reference schema' do
+      it 'returns a success action' do
+        action = adapter.request(code)
+        expect(action.type).to match('ENGINE_COMPUTATION')
+        expect(action.payload[:state]).to match('success')
+        expect(action.last?).to be_truthy
       end
+
+      it 'accepts a block to which it yields each intermediate action' do
+        book = double('book')
+        expect(book).to receive(:hello)
+          .with(kind_of(Action), anything, anything)
+          .at_least(:once)
+        adapter.request(code) do |action, schema, data|
+          book.hello(action, schema, data)
+        end
+      end
+    end
+  end
+
+  describe '.request_schema' do
+    it 'returns the default schema' do
+      actual = adapter.request_schema.new_schema
+      expect(actual).to be_a Hash
+      expect(actual[:fields].size).to be == 12
     end
   end
 end

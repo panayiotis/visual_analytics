@@ -1,21 +1,23 @@
 class LivyDaemonJob < ApplicationJob
   queue_as :default
 
-  def perform(daemon: true, sleep_time: 3)
+  def perform(daemon: true, sleep_time: 5)
     loop do
       begin
         res = http_request
       rescue StandardError => e
+        action = dispatch_error_action
+        return action unless daemon
         logger.error(e)
-        logger.error "try again in #{sleep_time * 5}s"
         sleep sleep_time * 5
         next
       end
 
       if res.code == '200'
-        action = dispach_action(res.body)
+        action = dispatch_success_action(res.body)
         return action unless daemon
       else
+        dispatch_error_action
         logger.error 'could not fetch sessions from Livy server'
         raise 'could not fetch sessions from Livy server' unless daemon
       end
@@ -34,20 +36,32 @@ class LivyDaemonJob < ApplicationJob
       http(uri).request(req)
     end
 
-    def dispach_action(livy_status_json)
-      previous_livy_status_json = Redis.current.get 'livy'
+    def dispatch(action)
+      ActionCable.server.broadcast 'livy_channel', action
+      action
+    end
+
+    def dispatch_success_action(livy_status_json)
       livy_status = JSON.parse livy_status_json, symbolize_names: true
+      action = Action.new(
+        type: 'CONNECTIVITY_ENGINE',
+        payload: livy_status.merge(name: 'livy', connected: true)
+      )
+      if action.stale?('livy')
+        action.broadcast_to('livy_channel')
+        action.cache_to('livy')
+      end
+      action
+    end
 
-      action = {
-        type: 'LIVY',
-        payload: livy_status,
-        meta: { broadcasted: false }
-      }
-
-      if previous_livy_status_json != livy_status_json
-        Redis.current.set('livy', livy_status_json)
-        action[:meta] = { broadcasted: true }
-        ActionCable.server.broadcast 'livy_channel', action
+    def dispatch_error_action
+      action = Action.new(
+        type: 'CONNECTIVITY_ENGINE',
+        payload: { name: 'livy', connected: false }
+      )
+      if action.stale?('livy')
+        action.broadcast_to('livy_channel')
+        action.cache_to('livy')
       end
       action
     end

@@ -11,12 +11,12 @@ class Schema
         name = SchemaField.basename(fullname).to_sym
         level = SchemaField.level(fullname)
         unless fields.key?(name)
-          fields[name] = { name: name, level: nil, levels: [], drill: [] }
+          fields[name] = { name: name.to_s, level: nil, levels: [], drill: [] }
         end
-        if level
-          fields[name][:levels].push(level)
-          fields[name][:drill].push(nil)
-        end
+        next unless level
+        fields[name][:levels].push(level)
+        fields[name][:drill].push(nil)
+        fields[name][:level] = level if fields[name][:level].nil?
       end
       new type: hash[:type], fields: fields
     end

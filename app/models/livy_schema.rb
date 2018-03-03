@@ -39,7 +39,14 @@ class LivySchema < Schema
       .delete('"')
   end
 
-  def to_h
-    fields.map { |f| [f.name.to_sym, f.to_h] }.to_h
+  def to_code
+    <<~CODE
+      print(s"""{
+        "schema": ${spark.sql("#{to_schema_json_sql}").schema.json},
+        "data": [
+          ${spark.sql("#{to_sql}").coalesce(1).toJSON.collect().mkString(",\\n")}
+        ]
+      }""")
+    CODE
   end
 end

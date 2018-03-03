@@ -16,6 +16,7 @@ class Chunk < ApplicationRecord
 
   after_destroy do
     File.delete path
+    File.delete "#{path}.gz"
   end
 
   def to_param

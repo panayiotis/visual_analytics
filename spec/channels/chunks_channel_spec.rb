@@ -1,16 +1,19 @@
 require 'rails_helper'
 
 class TestConnection
-  attr_reader :identifiers, :logger
+  attr_reader :identifiers, :logger, :server
 
+  # https://github.com/rails/rails/blob/master/actioncable/lib/action_cable/connection/base.rb
   def initialize(identifiers_hash = {})
     @identifiers = identifiers_hash.keys
     @logger = ActiveSupport::TaggedLogging.new(
       ActiveSupport::Logger.new(StringIO.new)
     )
+    @server = ActionCable.server
 
     # This is an equivalent of providing `identified_by :identifier_key`
     # in ActionCable::Connection::Base subclass
+    # https://github.com/rails/rails/blob/master/actioncable/lib/action_cable/connection/identification.rb
     identifiers_hash.each do |identifier, value|
       define_singleton_method(identifier) do
         value
@@ -20,32 +23,42 @@ class TestConnection
 end
 
 RSpec.describe ChunksChannel do
-  subject(:channel) { described_class.new(connection, {}) }
-
-  let(:current_user) { build(:user) }
-
-  # Connection is `identified_by :current_user`
+  let(:notebook) { create :notebook }
+  let(:current_user) { create(:user) }
+  let(:identifier) { "identifier:#{Forgery(:basic).text}" }
+  let(:channel_name) { "chunks:#{notebook.id}:#{current_user.id}" }
+  let(:server) { ActionCable.server }
+  subject(:channel) { described_class.new(connection, identifier, params) }
   let(:connection) { TestConnection.new(current_user: current_user) }
-
   let(:action_cable) { ActionCable.server }
 
+  let(:params) do
+    HashWithIndifferentAccess.new(notebook: notebook.as_json)
+  end
+
   # ActionCable dispatches actions by the `action` attribute.
-  # In this test we assume the payload was successfully parsed
-  # (it could be a JSON payload, for example).
-  let(:action_hash) do
+  let(:data) do
     {
       'action' => 'request',
-      'type' => 'type...',
-      'payload' => {
-        'notebook' => { 'id' => 1 },
-        'schema' => build(:schema).to_h
-      }
+      'notebook' => { 'id' => 1 },
+      'schema' => build(:schema).to_h
     }
   end
 
-  it 'broadcasts an Action to chunks_channel at least 3 times' do
-    expect(action_cable).to receive(:broadcast)
-      .with('chunks_channel', kind_of(Action)).at_least(3).times
-    channel.perform_action(action_hash)
+  describe '#request data' do
+    it 'broadcasts an Action to chunks_channel at least 3 times' do
+      expect(action_cable).to receive(:broadcast)
+        .with(channel_name, kind_of(Action)).at_least(2).times
+      channel.subscribed
+      channel.perform_action(data)
+    end
+  end
+  describe '#request_schema' do
+    it 'broadcasts an Action to chunks_channel at least 3 times' do
+      expect(action_cable).to receive(:broadcast)
+        .with(channel_name, kind_of(Action)).at_least(2).times
+      channel.subscribed
+      channel.perform_action(data.merge('action' => 'request_initial_data'))
+    end
   end
 end

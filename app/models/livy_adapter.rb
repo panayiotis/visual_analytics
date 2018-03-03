@@ -1,7 +1,7 @@
 class LivyAdapter
   class << self
     def status
-      JSON.parse Redis.current.get('livy'), symbolize_names: true
+      Action.from_cache('livy').payload
     end
   end
 
@@ -22,23 +22,12 @@ class LivyAdapter
   end
 
   # TODO: Refactor method
-  def request(livy_schema) # rubocop:disable Metrics/MethodLength
+  def request(code) # rubocop:disable Metrics/MethodLength
     raise 'LivyAdapter: Livy session has not started' if sessions.empty?
 
     uri = URI("http://localhost:8998/sessions/#{active_session_id}/statements")
     http = Net::HTTP.new(uri.host, uri.port)
     req = Net::HTTP::Post.new(uri.path, 'Content-Type' => 'application/json')
-    sql = livy_schema.to_sql
-    schema_json_sql = livy_schema.to_schema_json_sql
-
-    code = <<~CODE
-      print(s"""{
-        "schema": ${spark.sql("#{schema_json_sql}").schema.json},
-        "data": [
-          ${spark.sql("#{sql}").coalesce(1).toJSON.collect().mkString(",\\n")}
-        ]
-      }""")
-    CODE
 
     req.body = {
       kind: 'spark',
@@ -69,10 +58,21 @@ class LivyAdapter
         new_schema = LivySchema.from_spark(action.new_schema)
       end
 
-      yield(action, new_schema, sql, data) if block_given?
+      yield(action, new_schema, data) if block_given?
 
       return action if action.last?
       sleep 1.0
     end
+  end
+
+  def request_schema(view: 'view')
+    code = <<~CODE
+      print(s"""{
+        "schema": ${spark.sql("select * from #{view} limit 1").schema.json},
+        "data": [
+        ]
+      }""")
+    CODE
+    request(code)
   end
 end

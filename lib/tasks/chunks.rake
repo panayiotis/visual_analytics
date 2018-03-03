@@ -5,7 +5,6 @@ namespace :chunks do
     print "\033\143" # reset
     @notebook = Notebook.first
     puts "Precompile chunks for notebook: #{@notebook.id} #{@notebook.name}"
-    @notebook.chunks.destroy_all
 
     h = {
       type: '',
@@ -73,7 +72,7 @@ namespace :chunks do
 
     # TODO: Move this functionality to a model. This method is a copy of
     # the ChunksChannel method.
-    # rubocop:disable MethodLength, ShadowingOuterLocalVariable, GuardClause
+    # rubocop:disable MethodLength, GuardClause
     def request(schema_hash)
       adapter = LivyAdapter.new
       livy_schema = LivySchema.new(schema_hash)
@@ -85,7 +84,7 @@ namespace :chunks do
 
       unless chunk.blob
         time_a = Time.now.to_i
-        adapter.request(livy_schema) do |action, new_schema, sql, data|
+        adapter.request(livy_schema) do |action, new_schema, data|
           if action.success?
             time_b = Time.now.to_i
             json = data.to_json

@@ -1,8 +1,10 @@
 class NotebookChannel < ApplicationCable::Channel
   def subscribed
-    # TODO: needs testing with a js client
-    notebook = Notebook.find_by(id: params.dig('notebook', 'id'))
-    stream_from "#{notebook.adapter}_channel"
+    @notebook = Notebook.find_by(id: params.dig('notebook', 'id'))
+    stream_from "#{@notebook.adapter}_channel"
+    stream_from "notebook:#{@notebook.id}"
+    Action.from_cache(@notebook.adapter)
+      .broadcast_to("notebook:#{@notebook.id}")
   end
 
   def unsubscribed

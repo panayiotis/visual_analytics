@@ -60,4 +60,5 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include RequestSpecHelper, type: :request
+  config.filter_run_when_matching :focus
 end
