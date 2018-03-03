@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { helloAction } from '../actions/hello'
+import Charts from './charts'
+import Layout from './layout'
+import { establish } from '../actions/connectivity'
 
 class App extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
-    setInterval(() => {
-      console.log('dispatch action hello')
-      props.helloAction(Date.now())
-    }, 2000)
   }
 
   componentDidMount() {
@@ -21,7 +18,7 @@ class App extends Component {
   }
 
   render() {
-    return <h1>App {this.props.hello} </h1>
+    return <Layout />
   }
 }
 
@@ -30,7 +27,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  helloAction: payload => dispatch(helloAction(payload))
+  establish: dispatch(establish())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
