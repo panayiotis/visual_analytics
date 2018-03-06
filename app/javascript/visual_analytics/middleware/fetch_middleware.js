@@ -8,7 +8,7 @@ const fetchMiddleware = store => next => action => {
   if (!get(action, 'payload.fetch_path', false)) {
     return next(action)
   }
-  console.log(action)
+  console.debug('fetch middleware applied')
   let dispatch = store.dispatch
   let config = action.payload
 

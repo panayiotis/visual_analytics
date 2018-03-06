@@ -88,7 +88,7 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    erubi (1.7.0)
+    erubi (1.7.1)
     erubis (2.7.0)
     eventmachine (1.2.5)
     execjs (2.7.0)
@@ -115,9 +115,6 @@ GEM
     guard-ctags-bundler (1.4.0)
       guard (>= 2.0)
       guard-compat (>= 0.1.0)
-    guard-jest (0.1.1)
-      concurrent-ruby (~> 1.0.4)
-      guard-compat (~> 1.2)
     guard-livereload (2.5.2)
       em-websocket (~> 0.5)
       guard (~> 2.8)
@@ -145,7 +142,7 @@ GEM
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     http_parser.rb (0.6.0)
-    i18n (0.9.4)
+    i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
     jbuilder (2.7.0)
@@ -191,9 +188,9 @@ GEM
     rack (2.0.4)
     rack-livereload (0.3.16)
       rack
-    rack-proxy (0.6.3)
+    rack-proxy (0.6.4)
       rack
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rails (5.2.0.rc1)
       actioncable (= 5.2.0.rc1)
@@ -311,7 +308,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webpacker (3.2.2)
+    webpacker (3.3.0)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
@@ -337,7 +334,6 @@ DEPENDENCIES
   forgery
   guard
   guard-ctags-bundler
-  guard-jest
   guard-livereload
   guard-rspec
   guard-shell

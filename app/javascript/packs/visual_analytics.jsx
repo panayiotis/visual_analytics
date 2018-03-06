@@ -10,6 +10,7 @@ import thunk from 'redux-thunk'
 import App from '../visual_analytics'
 import reducer from '../visual_analytics/reducers'
 import fetchMiddleware from '../visual_analytics/middleware/fetch_middleware'
+import dataTransformMiddleware from '../visual_analytics/middleware/data_transform_middleware'
 
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
@@ -28,7 +29,9 @@ document.addEventListener('turbolinks:load', () => {
   const store = createStore(
     reducer,
     initialState,
-    composeEnhancers(applyMiddleware(thunk, fetchMiddleware))
+    composeEnhancers(
+      applyMiddleware(thunk, fetchMiddleware, dataTransformMiddleware)
+    )
   )
 
   render(

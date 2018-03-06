@@ -11,9 +11,9 @@ class ChunksChannel < ApplicationCable::Channel
   end
 
   # rubocop:disable all
-  def request(data)
-    data.deep_symbolize_keys!
-    schema_hash = data.dig(:schema)
+  def request(request_data)
+    request_data.deep_symbolize_keys!
+    schema_hash = request_data.dig(:schema)
     livy_schema = LivySchema.new(schema_hash)
     code = livy_schema.to_code
     sql = livy_schema.to_sql
@@ -23,15 +23,14 @@ class ChunksChannel < ApplicationCable::Channel
     )
 
     if chunk.blob
-      action = Action.new(
+      Action.new(
         type: 'ENGINE_COMPUTATION',
         payload: {
           state: :success,
+          cached: true,
           location: "/chunks/#{chunk.key}.json"
-        }.merge(chunk.as_json)
-      )
-
-      ActionCable.server.broadcast @channel_name, action
+        }
+      ).broadcast_to @channel_name
 
       Action.new(
         type: 'DATA',
@@ -39,28 +38,43 @@ class ChunksChannel < ApplicationCable::Channel
           fetch_path: "/chunks/#{chunk.key}.json"
         }
       ).broadcast_to @channel_name
+
+      Action.new(
+        type: 'CHUNK',
+        payload: chunk.as_json
+      ).broadcast_to @channel_name
     else
       time_a = Time.now.to_i
       @adapter.request(code) do |action, new_schema, data|
         if action.success?
           time_b = Time.now.to_i
-          json = {schema: new_schema, data: data}.to_json
+          json = {schema: livy_schema.as_json, data: data}.to_json
           chunk.blob = json
           chunk.byte_size = json.size
           chunk.computation_time = time_b - time_a
           chunk.save
-          action.payload[:location] =
-            "/chunks/#{chunk.key}.json"
-          action.payload = action.payload.merge(chunk.as_json)
 
+          action.payload = action.payload.merge({
+            cached: false,
+            location: "/chunks/#{chunk.key}.json"
+          })
           ActionCable.server.broadcast @channel_name, action
+
           Action.new(
             type: 'DATA',
             payload: {
               fetch_path: "/chunks/#{chunk.key}.json"
             }
           ).broadcast_to @channel_name
+
+          Action.new(
+            type: 'CHUNK',
+            payload: chunk.as_json
+          ).broadcast_to @channel_name
+        else
+          action.broadcast_to @channel_name
         end
+
       end
     end
   end

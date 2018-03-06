@@ -6,13 +6,15 @@ import engine from './engine'
 import data from './data'
 import schema from './schema'
 import layout from './layout'
+import crossfilter from './crossfilter'
 
 const reducer = combineReducers({
   connectivity,
+  crossfilter,
   data,
   engine,
-  notebook,
   layout,
+  notebook,
   schema
 })
 

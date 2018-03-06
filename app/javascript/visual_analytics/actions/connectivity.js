@@ -25,7 +25,6 @@ export const disconnected = createAction(CHANNEL_DISCONNECTED)
 export const perform = (channel, action, data) => {
   return function(dispatch) {
     App.channels[channel].perform(action, data)
-    console.log(data)
     dispatch({ type: CHANNEL_PERFORM, payload: data })
   }
 }
@@ -88,7 +87,7 @@ export const requestInitialData = () => {
       /* Here is your code. Balabala...*/
       let connected = getState().connectivity.engine.connected
       if (connected) {
-        console.log('request initial data...')
+        console.debug('request initial data...')
         dispatch(perform('chunks', 'request_initial_data', {}))
         clearInterval(handler)
       }

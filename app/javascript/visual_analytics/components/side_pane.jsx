@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Image, Button, Progress } from 'semantic-ui-react'
+import { Image, Button, Progress, Statistic } from 'semantic-ui-react'
 import SplitPane from 'react-split-pane'
 import { connect } from 'react-redux'
 import Menu from './menu'
@@ -11,12 +11,7 @@ import Charts from './charts'
 class SidePane extends Component {
   render() {
     let progressBar = null
-
-    /*if (['running', 'waiting'].includes(state)) {
-      progressBar = (
-        <Progress percent={100} size={'small'} indicating />
-      )
-    }*/
+    const { filteredLength, dataLength } = this.props
 
     return (
       <div
@@ -36,6 +31,8 @@ class SidePane extends Component {
 }
 
 const mapStateToProps = state => ({
+  //filteredLength: state.crossfilter.filtered,
+  //dataLength: state.data.length,
   statement: state.statement
 })
 

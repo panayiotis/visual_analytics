@@ -1,7 +1,7 @@
 class LivyDaemonJob < ApplicationJob
   queue_as :default
 
-  def perform(daemon: true, sleep_time: 5)
+  def perform(daemon: true, sleep_time: 1.0)
     loop do
       begin
         res = http_request
@@ -45,7 +45,8 @@ class LivyDaemonJob < ApplicationJob
       livy_status = JSON.parse livy_status_json, symbolize_names: true
       action = Action.new(
         type: 'CONNECTIVITY_ENGINE',
-        payload: livy_status.merge(name: 'livy', connected: true)
+        payload: { name: 'livy', connected: true, total: 0, sessions: [] }
+          .merge(livy_status)
       )
       if action.stale?('livy')
         action.broadcast_to('livy_channel')
@@ -57,7 +58,7 @@ class LivyDaemonJob < ApplicationJob
     def dispatch_error_action
       action = Action.new(
         type: 'CONNECTIVITY_ENGINE',
-        payload: { name: 'livy', connected: false }
+        payload: { name: 'livy', connected: false, total: 0, sessions: [] }
       )
       if action.stale?('livy')
         action.broadcast_to('livy_channel')

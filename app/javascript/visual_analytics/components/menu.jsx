@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { sidebarToggle } from '../actions/layout'
+import { handleCrossfilterReset } from '../actions/crossfilter'
 
 import {
   Button,
@@ -12,6 +13,7 @@ import {
   Popup,
   Progress,
   Segment,
+  Statistic,
   Sidebar,
   Table
 } from 'semantic-ui-react'
@@ -37,6 +39,42 @@ const ConnectionStatusMenuItem = props => {
   )
 }
 
+const ProgressBarLabel = props => {
+  const { state } = props
+  switch (state) {
+    case 'initial':
+      return 'initial'
+    case 'waiting':
+      return 'waiting'
+    case 'running':
+      return 'running'
+    case 'error':
+      return 'error'
+    case 'success':
+      return 'success'
+    default:
+      return null
+  }
+}
+
+const ProgressBar = props => {
+  const { state, progress } = props
+  switch (state) {
+    case 'initial':
+      return <Progress size="small" disabled percent={0} />
+    case 'waiting':
+      return <Progress size="small" active color="teal" percent={100} />
+    case 'running':
+      return <Progress size="small" active success percent={progress * 100} />
+    case 'error':
+      return <Progress size="small" error percent={progress * 100} />
+    case 'success':
+      return <Progress size="small" disabled percent={100} />
+    default:
+      return null
+  }
+}
+
 class CustomMenu extends Component {
   render() {
     const { data, schema } = this.props
@@ -45,6 +83,11 @@ class CustomMenu extends Component {
     const { computation } = this.props.engine
     const { request, fetchAction, reset } = this.props
     const { sidebarToggle } = this.props
+    const totalRows = this.props.data.length
+    const filteredRows = this.props.crossfilter.count
+    const filteredSum = this.props.crossfilter.sum
+    const hasFilters = filteredRows != totalRows
+
     const sesionStatus = (loading, busy, idle) => {
       if (engine.sessions.length == 0) {
         return loading
@@ -63,7 +106,6 @@ class CustomMenu extends Component {
         name: sesionStatus('spinner', 'code', 'code'),
         color: sesionStatus('red', 'green', 'blue'),
         loading: sesionStatus(true, false, false),
-
         header: 'Session',
         content: 'a spark session must be initiated before the app can run'
       },
@@ -101,15 +143,34 @@ class CustomMenu extends Component {
           </Menu.Menu>
         </Menu>
 
-        <Segment attached="bottom" compact={true}>
+        <Segment attached="bottom">
           <Grid divided columns={16}>
             <Grid.Column width={4} style={{ paddingBottom: 0 }}>
-              system cache
+              <ProgressBarLabel {...computation} />
             </Grid.Column>
             <Grid.Column width={12} style={{ paddingBottom: 0 }}>
-              <Progress size="small" percent={11} />
+              <ProgressBar {...computation} />
             </Grid.Column>
           </Grid>
+        </Segment>
+        <Segment attached="bottom">
+          <Statistic.Group widths={4} size="mini">
+            <Statistic label="total rows" value={totalRows} />
+            <Statistic
+              label="filtered rows"
+              value={filteredRows == 0 ? totalRows : filteredRows}
+            />
+            <Statistic label="Sum" value={filteredSum} />
+            {
+              <Button
+                disabled={!hasFilters}
+                size="mini"
+                onClick={handleCrossfilterReset()}
+              >
+                reset
+              </Button>
+            }
+          </Statistic.Group>
         </Segment>
       </div>
     )
@@ -121,7 +182,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  sidebarToggle: () => () => dispatch(sidebarToggle())
+  sidebarToggle: () => () => dispatch(sidebarToggle()),
+  handleCrossfilterReset: () => () => dispatch(handleCrossfilterReset())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustomMenu)
