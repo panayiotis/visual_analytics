@@ -17,6 +17,7 @@ class Schema
         fields[name][:levels].push(level)
         fields[name][:drill].push(nil)
         fields[name][:level] = level if fields[name][:level].nil?
+        fields[name][:level] = level if level == 'year'
       end
       new type: hash[:type], fields: fields
     end

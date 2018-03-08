@@ -19,7 +19,7 @@ class ChunksChannel < ApplicationCable::Channel
     sql = livy_schema.to_sql
     chunk = Chunk.find_or_initialize_by(
       code: sql,
-      notebook: Notebook.first
+      notebook: @notebook
     )
 
     if chunk.blob
@@ -80,7 +80,6 @@ class ChunksChannel < ApplicationCable::Channel
   end
 
   def request_initial_data(data)
-
     action = @adapter.request_schema
     spark_schema = action.new_schema
     schema_hash = LivySchema.from_spark(spark_schema).to_h

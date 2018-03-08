@@ -1,3 +1,32 @@
 // Place all the styles related to the chunks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'mapbox-gl/dist/mapbox-gl';
+.pushable,
+.pusher,
+.SplitPane,
+.Pane2 {
+  pointer-events: none;
+}
+.Resizer,
+.sidebar,
+.sidepanejsx {
+  pointer-events: auto;
+}
+.sidepanejsx {
+}
+.Pane1 {
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  max-height: 100vh;
+  height: 100vh;
+  opacity: 1;
+}
+.map-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}

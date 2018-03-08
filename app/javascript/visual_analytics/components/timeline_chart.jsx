@@ -7,6 +7,7 @@ import colorbrewer from 'colorbrewer'
 import { Segment } from 'semantic-ui-react'
 import { crossfilterFilter } from '../actions/crossfilter'
 import { handleDrill } from '../actions/engine'
+import { dateToQuarter } from '../helpers/dates'
 
 class TimelineChart extends React.Component {
   constructor(props) {
@@ -81,6 +82,17 @@ class TimelineChart extends React.Component {
           .yAxisLabel('y axis label')
         chart.xAxis().ticks(d3.time.years)
         break
+      case 'quarter':
+        chart
+          .round(date => d3.time.day.offset(dateToQuarter(date), 50))
+          .x(d3.time.scale().domain(timeDomain))
+          .xAxisLabel('x axis label')
+          .xAxisPadding(60)
+          .xAxisPaddingUnit('day')
+          .xUnits((start, stop) => d3.time.months(start, stop, 3))
+          .yAxisLabel('y axis label')
+        chart.xAxis().ticks(d3.time.months, 3)
+        break
       default:
         chart
           .round(date => d3.time.day.offset(d3.time.month(date), 15))
@@ -91,7 +103,6 @@ class TimelineChart extends React.Component {
           .xUnits(d3.time.months)
           .yAxisLabel('y axis label')
         chart.xAxis().ticks(d3.time.months, 3)
-        break
     }
 
     chart.on('filtered', (chart, filter) => {

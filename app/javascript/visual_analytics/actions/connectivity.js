@@ -6,7 +6,7 @@ import {
   CHANNEL_DISCONNECTED,
   CHANNEL_RECEIVED,
   CHANNEL_PERFORM
-} from '../actions/action_types'
+} from './action_types'
 
 export const connected = createAction(CHANNEL_CONNECTED)
 
@@ -84,7 +84,6 @@ export const requestInitialData = () => {
     let sleepTime = 100
 
     function loop() {
-      /* Here is your code. Balabala...*/
       let connected = getState().connectivity.engine.connected
       if (connected) {
         console.debug('request initial data...')
@@ -94,5 +93,17 @@ export const requestInitialData = () => {
     }
 
     var handler = setInterval(loop, sleepTime)
+  }
+}
+
+export const handleInvalidateCache = () => {
+  return function(dispatch, getState) {
+    dispatch(perform('notebook', 'invalidate_cache', {}))
+  }
+}
+
+export const handleReloadSchema = () => {
+  return function(dispatch, getState) {
+    dispatch(perform('chunks', 'request_initial_data', {}))
   }
 }

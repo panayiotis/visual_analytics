@@ -3,7 +3,7 @@ $color_celeste: #ccc;
 $color_fair_pink: #fee;
 $color_white: #fff;
 $color_black: #000;
-$color_steel_blue: #4682b4;
+$color_steel_blue: #1d91c0;
 $color_gallery: #eee;
 $color_storm_dust: #666;
 $color_grey: #808080;
@@ -298,6 +298,20 @@ div.dc-chart {
       fill: darkslategray;
       font-weight: 800;
       transform: rotate(360deg);
+    }
+  }
+}
+.dc-chart {
+  .barLabel {
+    font-size: 11px;
+  }
+  .brush .extent {
+    fill: lighten($color_steel_blue, 5%);
+  }
+  .bar {
+    fill: darken($color_steel_blue, 0%);
+    &.deselected {
+      //fill: $color_steel_blue;
     }
   }
 }

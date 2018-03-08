@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Button,
-  Icon,
-  Table,
   Divider,
-  Segment,
-  Menu,
   Grid,
-  Popup,
-  Statistic,
+  Icon,
   Label,
-  Progress
+  Menu,
+  Message,
+  Popup,
+  Progress,
+  Segment,
+  Statistic,
+  Table
 } from 'semantic-ui-react'
 import { perform, requestInitialData } from '../actions/connectivity'
-import schemadata from '../schema_stub'
 import get from 'lodash/get'
 import isEmpty from 'lodash/isEmpty'
 import flatten from 'lodash/flatten'
@@ -25,7 +25,17 @@ import * as d3 from 'd3'
 import RowChart from './row_chart'
 import TimelineChart from './timeline_chart'
 import HierarchyLabels from './hierarchy_labels'
-import { crossfilterAction } from '../actions/crossfilter'
+import { crossfilterAction, updateElevations } from '../actions/crossfilter'
+
+const NoSessionMessage = () => (
+  <Message color="orange" floating icon>
+    <Icon name="circle notched" loading />
+    <Message.Content>
+      <Message.Header>No visualization data yet</Message.Header>
+      You have to connect to an active Spark Session
+    </Message.Content>
+  </Message>
+)
 
 class Charts extends Component {
   constructor(props) {
@@ -47,18 +57,32 @@ class Charts extends Component {
     App.xf = crossfilter(data)
     App.dimensions = {}
     App.groups = {}
-    Object.values(schema.fields).forEach(f => {
+
+    const fields = Object.values(schema.fields).sort((a, b) => {
+      if (a.name === 'date') {
+        return -1
+      } else if (b.name === 'date') {
+        return 1
+      } else if (a.name === 'nuts') {
+        return -1
+      } else if (b.name === 'nuts') {
+        return 1
+      } else {
+        return -1
+      }
+    })
+    fields.forEach(f => {
       App.dimensions[f.name] = App.xf.dimension(d => d[f.name])
     })
 
-    Object.values(schema.fields).forEach(f => {
+    fields.forEach(f => {
       App.groups[f.name] = App.dimensions[f.name]
         .group()
         .reduceSum(d => d.count)
     })
     const uniqueValues = name => App.groups[name].all().map(g => g.key)
 
-    this.segments = Object.values(schema.fields).map(f => {
+    this.segments = fields.map(f => {
       let props = {
         key: `${f.name}chart`,
         dimension: App.dimensions[f.name],
@@ -92,12 +116,17 @@ class Charts extends Component {
         .reduceCount()
         .value()
     })
+    updateElevations()
   }
 
   render() {
     const segments = this.segments
     if (segments.length == 0) {
-      return <div />
+      return (
+        <div style={{ margin: '3em 1em' }}>
+          <NoSessionMessage />
+        </div>
+      )
     }
 
     return (
@@ -119,7 +148,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   requestInitialData: () => dispatch(requestInitialData()),
   request: data => () => dispatch(perform('chunks', 'request', data)),
-  crossfilterAction: data => dispatch(crossfilterAction(data))
+  crossfilterAction: data => dispatch(crossfilterAction(data)),
+  updateElevations: () => dispatch(updateElevations())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Charts)

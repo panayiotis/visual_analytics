@@ -14,4 +14,8 @@ class NotebookChannel < ApplicationCable::Channel
   def unfollow
     stop_all_streams
   end
+
+  def invalidate_cache
+    @notebook.chunks.destroy_all
+  end
 end

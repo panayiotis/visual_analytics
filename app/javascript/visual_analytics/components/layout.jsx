@@ -19,7 +19,9 @@ class Layout extends Component {
   render() {
     return (
       <div>
-        <Map />
+        <div className="map-container">
+          <Map />
+        </div>
         <Sidebar.Pushable
           style={{
             backgroundColor: 'rgba(255,255,255,0.0)'

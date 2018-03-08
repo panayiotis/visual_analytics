@@ -8,18 +8,22 @@ import { Segment } from 'semantic-ui-react'
 import findIndex from 'lodash/findIndex'
 import { crossfilterFilter } from '../actions/crossfilter'
 import { handleDrill } from '../actions/engine'
+import { formatLargeNumber } from '../helpers/numbers'
 
 class RowChart extends React.Component {
   constructor(props) {
     super(props)
     this.el = null
   }
+
   componentDidMount() {
     this.postRender()
   }
+
   componentDidUpdate() {
     this.postRender()
   }
+
   postRender() {
     const { dimension, group, name, level, levels, drill } = this.props
     const { handleDrill, crossfilterFilter } = this.props
@@ -27,7 +31,27 @@ class RowChart extends React.Component {
     const hasLevels = levels.length > 0
     const index = findIndex(levels, i => i === level)
     const hasDrill = index >= 0 && index < levels.length - 1
-    const colors = d3.scale.quantize().range(colorbrewer.YlGnBu[9])
+    const colors = d3.scale.quantile().domain(group.all().map(d => d.value))
+
+    if (name === 'nuts') {
+      colors.range([
+        d3.rgb(1, 152, 189),
+        d3.rgb(73, 227, 206),
+        d3.rgb(216, 254, 181),
+        d3.rgb(254, 237, 177),
+        d3.rgb(254, 173, 84),
+        d3.rgb(209, 55, 78)
+      ])
+    } else {
+      colors.range([
+        '#feedb1',
+        '#edffb1',
+        '#c7e9b4',
+        '#7fcdbb',
+        '#41b6c4',
+        '#1d91c0'
+      ])
+    }
 
     const chart = rowChart(this.el)
 
@@ -42,8 +66,15 @@ class RowChart extends React.Component {
       })
       .dimension(dimension)
       .group(group)
+      .colors(colors)
       .colorAccessor((d, i) => d.value)
       .elasticX(true)
+
+    chart.xAxis().tickFormat(value => formatLargeNumber(value))
+
+    chart.on('preRedraw', chart =>
+      chart.colors(colors.domain(group.all().map(d => d.value)))
+    )
 
     chart.on('filtered', (chart, filter) => {
       crossfilterFilter({
@@ -63,7 +94,7 @@ class RowChart extends React.Component {
       chart.on('postRender', chart => {
         var barHeight
         barHeight = chart.select('g.row rect').attr('height')
-        return chart
+        chart
           .selectAll('g.row')
           .append('g')
           .classed('drill-down', true)

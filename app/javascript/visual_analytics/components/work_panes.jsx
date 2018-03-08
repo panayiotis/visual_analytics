@@ -21,30 +21,9 @@ class WorkPanes extends Component {
           defaultSize={600}
           className="primary"
           onChange={size => chartsPaneResize()}
-          pane1Style={{
-            backgroundColor: 'rgba(255,255,255,1.0)',
-            overflow: 'hidden',
-            maxHeight: '100vh',
-            height: '100vh'
-          }}
         >
           <SidePane />
-          <SplitPane
-            split="horizontal"
-            defaultSize={800}
-            pane1Style={{
-              backgroundColor: 'rgba(255,255,255,0)'
-            }}
-            pane2Style={{
-              overflow: 'auto',
-              backgroundColor: 'rgba(255,255,255,1)'
-            }}
-          >
-            <div style={{ border: '1px solid lightblue' }}>
-              <h1>pane 2</h1>
-            </div>
-            <DebugPane />
-          </SplitPane>
+          <div />
         </SplitPane>
       </div>
     )

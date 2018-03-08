@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :chunks, only: %i[index show], param: :key
-  resources :geojson, only: %i[index show]
   resources :notebooks
-
+  get '/geojson/:dataset', to: 'geojson#show', constraints: { format: 'json' }
+  get '/geojson/:dataset/:level', to: 'geojson#show', constraints: { format: 'json' }
+  get '/geojson/:dataset/:level/:like', to: 'geojson#show', constraints: { format: 'json' }
 end

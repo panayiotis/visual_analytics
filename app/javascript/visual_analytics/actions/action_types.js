@@ -23,4 +23,6 @@ export const ENGINE_COMPUTATION = 'ENGINE_COMPUTATION'
 export const ENGINE_DRILL = 'ENGINE_DRILL'
 export const ENGINE_LEVEL = 'ENGINE_LEVEL'
 
+export const GEOJSON = 'GEOJSON'
+
 //export const LIVY_RECEIVED ='LIVY'

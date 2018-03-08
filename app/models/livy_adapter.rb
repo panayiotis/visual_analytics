@@ -24,7 +24,6 @@ class LivyAdapter
   # TODO: Refactor method
   def request(code) # rubocop:disable Metrics/MethodLength
     raise 'LivyAdapter: Livy session has not started' if sessions.empty?
-
     uri = URI("http://localhost:8998/sessions/#{active_session_id}/statements")
     http = Net::HTTP.new(uri.host, uri.port)
     req = Net::HTTP::Post.new(uri.path, 'Content-Type' => 'application/json')

@@ -38,7 +38,7 @@ RSpec.describe LivyAdapter, type: :model do
     it 'returns the default schema' do
       actual = adapter.request_schema.new_schema
       expect(actual).to be_a Hash
-      expect(actual[:fields].size).to be == 12
+      expect(actual[:fields].size).to be > 10
     end
   end
 end

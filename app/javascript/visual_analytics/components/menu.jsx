@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { sidebarToggle } from '../actions/layout'
 import { handleCrossfilterReset } from '../actions/crossfilter'
+import {
+  handleInvalidateCache,
+  handleReloadSchema
+} from '../actions/connectivity'
+import { formatLargeNumber } from '../helpers/numbers'
 
 import {
   Button,
@@ -24,12 +29,13 @@ import get from 'lodash/get'
 //import { toggleSidebar } from '../actions'
 
 const ConnectionStatusMenuItem = props => {
+  const { onClick } = props
   const { name, color, loading } = props
   const { header, content } = props
   return (
     <Popup
       trigger={
-        <Menu.Item>
+        <Menu.Item {...{ onClick }}>
           <Icon {...{ name, color, loading }} />
         </Menu.Item>
       }
@@ -81,7 +87,13 @@ class CustomMenu extends Component {
     const { server, engine } = this.props.connectivity
     const { sidebar } = this.props.layout
     const { computation } = this.props.engine
-    const { request, fetchAction, reset } = this.props
+    const {
+      request,
+      fetchAction,
+      handleCrossfilterReset,
+      handleInvalidateCache,
+      handleReloadSchema
+    } = this.props
     const { sidebarToggle } = this.props
     const totalRows = this.props.data.length
     const filteredRows = this.props.crossfilter.count
@@ -101,6 +113,24 @@ class CustomMenu extends Component {
       }
     }
     const connectionStatusProps = [
+      {
+        key: 'refresh',
+        name: 'refresh',
+        color: 'yellow',
+        loading: false,
+        onClick: handleReloadSchema(),
+        header: 'Reload Schema',
+        content: 'reload schema...'
+      },
+      {
+        key: 'cache',
+        name: 'erase',
+        color: 'yellow',
+        loading: false,
+        onClick: handleInvalidateCache(),
+        header: 'Invalidate Cache',
+        content: 'invalidate cache...'
+      },
       {
         key: 'session',
         name: sesionStatus('spinner', 'code', 'code'),
@@ -155,12 +185,19 @@ class CustomMenu extends Component {
         </Segment>
         <Segment attached="bottom">
           <Statistic.Group widths={4} size="mini">
-            <Statistic label="total rows" value={totalRows} />
+            <Statistic
+              label="total rows"
+              value={formatLargeNumber(totalRows)}
+            />
             <Statistic
               label="filtered rows"
-              value={filteredRows == 0 ? totalRows : filteredRows}
+              value={
+                filteredRows == 0
+                  ? formatLargeNumber(totalRows)
+                  : formatLargeNumber(filteredRows)
+              }
             />
-            <Statistic label="Sum" value={filteredSum} />
+            <Statistic label="Sum" value={formatLargeNumber(filteredSum)} />
             {
               <Button
                 disabled={!hasFilters}
@@ -183,7 +220,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   sidebarToggle: () => () => dispatch(sidebarToggle()),
-  handleCrossfilterReset: () => () => dispatch(handleCrossfilterReset())
+  handleCrossfilterReset: () => () => dispatch(handleCrossfilterReset()),
+  handleInvalidateCache: () => () => dispatch(handleInvalidateCache()),
+  handleReloadSchema: () => () => dispatch(handleReloadSchema())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CustomMenu)
