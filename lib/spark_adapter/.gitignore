@@ -1,0 +1,7 @@
+/project/*
+!/project/*.sbt
+!/project/*.properties
+/target/*
+!/target/.keep
+/.idea
+spark-warehouse
