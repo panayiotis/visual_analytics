@@ -10,6 +10,7 @@
     "dc": "https://github.com/dc-js/dc.js.git#d06bd9",
     "deck.gl": "^5.1.1",
     "lodash": "^4.17.5",
+    "node-forge": "^0.7.5",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

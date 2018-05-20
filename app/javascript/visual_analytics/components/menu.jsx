@@ -64,16 +64,30 @@ const ProgressBarLabel = props => {
 }
 
 const ProgressBar = props => {
-  const { state, progress } = props
+  // on error state progress is null
+  const { state, progress, evalue } = props
+
   switch (state) {
     case 'initial':
       return <Progress size="small" disabled percent={0} />
     case 'waiting':
       return <Progress size="small" active color="teal" percent={100} />
     case 'running':
-      return <Progress size="small" active success percent={progress * 100} />
+      return (
+        <Progress
+          size="small"
+          active
+          success
+          percent={Math.floor(progress * 100)}
+          progress="percent"
+        />
+      )
     case 'error':
-      return <Progress size="small" error percent={progress * 100} />
+      return (
+        <Progress size="small" error percent={0}>
+          {evalue}
+        </Progress>
+      )
     case 'success':
       return <Progress size="small" disabled percent={100} />
     default:

@@ -40,8 +40,9 @@ RSpec.describe ChunksChannel do
   let(:data) do
     {
       'action' => 'request',
-      'notebook' => { 'id' => 1 },
-      'schema' => build(:schema).to_h
+      'notebook' => { 'id' => notebook.id },
+      'schema' => build(:schema).to_h,
+      'key' => 'view63c55'
     }
   end
 
@@ -51,14 +52,6 @@ RSpec.describe ChunksChannel do
         .with(channel_name, kind_of(Action)).at_least(2).times
       channel.subscribed
       channel.perform_action(data)
-    end
-  end
-  describe '#request_schema' do
-    it 'broadcasts an Action to chunks_channel at least 3 times' do
-      expect(action_cable).to receive(:broadcast)
-        .with(channel_name, kind_of(Action)).at_least(2).times
-      channel.subscribed
-      channel.perform_action(data.merge('action' => 'request_initial_data'))
     end
   end
 end

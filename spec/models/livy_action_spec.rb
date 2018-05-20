@@ -62,8 +62,7 @@ RSpec.describe LivyAction, type: :model do
     subject { LivyAction.new_from_response(statements[:success]) }
 
     it '.new_from_response returns nil payload' do
-      expect(subject.payload).to include(:state)
-      expect(subject.payload.size).to be == 1
+      expect(subject.payload).to include(:state, :file, :key, :mock)
     end
 
     it '#success? is true' do
@@ -74,9 +73,8 @@ RSpec.describe LivyAction, type: :model do
       expect(subject.last?).to be_truthy
     end
 
-    it '#data has a data Array' do
-      expect(subject.data).to be_an Array
-      expect(subject.data.size).to be == 59
+    it '#payload includes the output data ' do
+      expect(subject.payload).to include :key
     end
   end
 
@@ -86,7 +84,7 @@ RSpec.describe LivyAction, type: :model do
     it '.new_from_response returns Hash payload with progress float' do
       expect(subject.error).to be_truthy
       expect(subject.payload).to be_a(Hash)
-      expect(subject.payload).to include(:state, :output)
+      expect(subject.payload).to include(:state, :evalue)
     end
   end
 end

@@ -13,22 +13,20 @@ class ChunksChannel < ApplicationCable::Channel
   # rubocop:disable all
   def request(request_data)
     request_data.deep_symbolize_keys!
-    schema_hash = request_data.dig(:schema)
-    livy_schema = LivySchema.new(schema_hash)
-    code = livy_schema.to_code
-    sql = livy_schema.to_sql
-    chunk = Chunk.find_or_initialize_by(
-      code: sql,
+    # ap request_data
+    key = request_data[:key]
+    chunk = Chunk.find_by(
+      key: key,
       notebook: @notebook
     )
 
-    if chunk.blob
+    if chunk # chunk is cached
       Action.new(
         type: 'ENGINE_COMPUTATION',
         payload: {
           state: :success,
           cached: true,
-          location: "/chunks/#{chunk.key}.json"
+          location: "/chunks/#{chunk.key}"
         }
       ).broadcast_to @channel_name
 
@@ -43,21 +41,34 @@ class ChunksChannel < ApplicationCable::Channel
         type: 'CHUNK',
         payload: chunk.as_json
       ).broadcast_to @channel_name
-    else
+
+    else # perform request
+
+      chunk = Chunk.new(notebook: @notebook)
+
       time_a = Time.now.to_i
-      @adapter.request(code) do |action, new_schema, data|
+      @adapter.request(request_data.except(:action,:key),
+                       '/var/data/storage',
+                       Rails.env.test?) do |action|
         if action.success?
           time_b = Time.now.to_i
-          json = {schema: livy_schema.as_json, data: data}.to_json
-          chunk.blob = json
-          chunk.byte_size = json.size
-          chunk.computation_time = time_b - time_a
-          chunk.save
+          key = action.payload.dig(:key)
 
-          action.payload = action.payload.merge({
-            cached: false,
+          chunk = Chunk.find_or_initialize_by(
+            key: key,
+            notebook: @notebook
+          )
+          is_cached = chunk.persisted?
+          unless chunk.persisted?
+            chunk.computation_time = time_b - time_a
+            chunk.save
+          end
+
+          action.payload = action.payload.except(:file).merge({
+            cached: is_cached,
             location: "/chunks/#{chunk.key}.json"
           })
+          # ap action.to_h # for debug
           ActionCable.server.broadcast @channel_name, action
 
           Action.new(
@@ -74,16 +85,8 @@ class ChunksChannel < ApplicationCable::Channel
         else
           action.broadcast_to @channel_name
         end
-
       end
     end
+    chunk
   end
-
-  def request_initial_data(data)
-    action = @adapter.request_schema
-    spark_schema = action.new_schema
-    schema_hash = LivySchema.from_spark(spark_schema).to_h
-    request({"schema"=> schema_hash})
-  end
-  # rubocop:enable all
 end

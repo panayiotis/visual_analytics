@@ -1,3 +1,4 @@
+# Read more: https://github.com/redux-utilities/flux-standard-action
 class Action
   include ActiveModel::AttributeMethods
 
@@ -39,8 +40,8 @@ class Action
     h = {}
     h[:type] = type
     h[:payload] = payload unless payload.nil?
-    h[:error] = payload unless error.nil?
-    h[:meta] = payload unless meta.nil?
+    h[:error] = error if error.is_a? TrueClass
+    h[:meta] = meta unless meta.nil?
     h
   end
 end

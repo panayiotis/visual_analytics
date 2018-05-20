@@ -10,13 +10,27 @@ RSpec.describe LivyAdapter, type: :model do
     responses.zip(files).to_h
   end
 
-  let(:code) { build(:livy_schema).to_code }
   let(:adapter) { LivyAdapter.new }
 
-  describe '.request' do
-    context 'with the reference schema' do
+  describe '#create_livy_session' do
+    it 'creates a new spark session' do
+      actual = adapter.create_livy_session
+      expect(actual).to be_a Hash
+      expect(actual).to include(:id, :state, :kind)
+    end
+  end
+
+  describe '#run_code' do
+    it 'runs a simple println statement' do
+      action = adapter.run_code('println("{\"hello\": \"world\"}")')
+      expect(action.payload).to include(:hello)
+    end
+  end
+
+  describe '#request' do
+    context 'with a mock argument' do
       it 'returns a success action' do
-        action = adapter.request(code)
+        action = adapter.request('mock argument', '/var/data/storage', true)
         expect(action.type).to match('ENGINE_COMPUTATION')
         expect(action.payload[:state]).to match('success')
         expect(action.last?).to be_truthy
@@ -25,20 +39,21 @@ RSpec.describe LivyAdapter, type: :model do
       it 'accepts a block to which it yields each intermediate action' do
         book = double('book')
         expect(book).to receive(:hello)
-          .with(kind_of(Action), anything, anything)
+          .with(kind_of(Action))
           .at_least(:once)
-        adapter.request(code) do |action, schema, data|
-          book.hello(action, schema, data)
+        adapter.request('mock_argument', '/var/data/storage', true) do |action|
+          book.hello(action)
         end
       end
     end
   end
 
-  describe '.request_schema' do
-    it 'returns the default schema' do
-      actual = adapter.request_schema.new_schema
-      expect(actual).to be_a Hash
-      expect(actual[:fields].size).to be > 10
+  describe '#request_views' do
+    it 'returns a hash with the views from Spark' do
+      actual = adapter.request_views
+      expect(actual).to be_an Array
+      expect(actual.first).to include(:name, :tableType, :isTemporary)
     end
   end
+
 end

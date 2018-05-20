@@ -13,16 +13,5 @@ FactoryBot.define do
       end
     end
 
-    factory :notebook_with_chunks_with_blobs do
-      transient do
-        chunks_count 5
-      end
-
-      after(:create) do |notebook, evaluator|
-        create_list(
-          :chunk_with_blob, evaluator.chunks_count, notebook: notebook
-        )
-      end
-    end
   end
 end

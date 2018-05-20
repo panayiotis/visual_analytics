@@ -4,7 +4,6 @@
   %thead
     %tr
       %th id
-      %th code
       %th key
       %th size
       %th time
@@ -14,7 +13,6 @@
     - @chunks.each do |chunk|
       %tr
         %td= chunk.id
-        %td= chunk.code
         %td= chunk.key
         %td= number_to_human_size(chunk.byte_size)
         %td= number_to_human_seconds(chunk.computation_time)

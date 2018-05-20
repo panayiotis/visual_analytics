@@ -39,11 +39,15 @@ class Geojson
 
     outfile = Rails.root.join('tmp', 'tmp_geojson.json').to_s
     infile = Rails.root.join(dataset[:path]).to_s
-    cmd = "ogr2ogr -f GeoJSON -sql \"#{sql}\" #{outfile} #{infile}"
+    debug_flag = Rails.env.development? ? 'on' : 'off'
+    cmd = "ogr2ogr -f GeoJSON -sql \"#{sql}\" \
+      #{outfile} #{infile} --debug #{debug_flag}".squish
+    Rails.logger.debug cmd
     key = "geojson:#{options[:dataset]}#{sql}"
     geojson = Rails.cache.fetch(key, expires_in: 1.hour) do
       FileUtils.rm_f(outfile)
-      _out, _err, _st = Open3.capture3(cmd)
+      _out, err, st = Open3.capture3(cmd)
+      raise StandardError, "GDAL Error #{st}\n#{cmd}\n#{err}" unless st.success?
       JSON.parse(File.read(outfile))
     end
 

@@ -97,5 +97,5 @@ namespace :chunks do
         end
       end
     end
-  # rubocop:enable MethodLength, ShadowingOuterLocalVariable, GuardClause
+  # rubocop:enable MethodLength, GuardClause
 end

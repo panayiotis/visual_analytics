@@ -1,6 +1,4 @@
 class LivyAction < Action
-  attr_accessor :data, :new_schema
-
   def initialize(*)
     super
   end
@@ -20,9 +18,7 @@ class LivyAction < Action
       new(
         type: 'ENGINE_COMPUTATION',
         payload: { state: state }.merge(payload),
-        error: state == :error,
-        data: extract_data(statement),
-        new_schema: extract_new_schema(statement)
+        error: state == :error
       )
     end
 
@@ -55,22 +51,17 @@ class LivyAction < Action
         { progress: statement[:progress] }
       end
 
-      def extract_payload_of_success(_statement)
-        {} # the payload will be set later
+      def extract_payload_of_success(statement)
+        json = statement.dig(:output, :data, 'text/plain'.to_sym)
+        if json
+          JSON.parse(json, symbolize_names: true)
+        else
+          {}
+        end
       end
 
       def extract_payload_of_error(statement)
-        { output: statement[:output] }
+        statement[:output]
       end
-
-      def extract_data(statement)
-        json = statement.dig(:output, :data, 'text/plain'.to_sym)
-        JSON.parse(json, symbolize_names: true).dig(:data) if json
-      end
-
-      def extract_new_schema(statement)
-        json = statement.dig(:output, :data, 'text/plain'.to_sym)
-        JSON.parse(json, symbolize_names: true).dig(:schema) if json
-      end
-    end
+  end
 end

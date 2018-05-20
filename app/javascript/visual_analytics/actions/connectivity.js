@@ -17,10 +17,10 @@ export const disconnected = createAction(CHANNEL_DISCONNECTED)
  * The actual params object that the server will receive is the data object
  * with an extra key named action with the action name.
  *
- * @param {string} channel name.
- * @param {string} action name.
- * @param {object} data.
- * @return {action} a simple redux action.
+ * @param {string} name - The channel's name.
+ * @param {string} name - The action's name.
+ * @param {object} data - The data that will be sent to the server.
+ * @return {object} action - A simple redux action.
  */
 export const perform = (channel, action, data) => {
   return function(dispatch) {
@@ -87,7 +87,9 @@ export const requestInitialData = () => {
       let connected = getState().connectivity.engine.connected
       if (connected) {
         console.debug('request initial data...')
-        dispatch(perform('chunks', 'request_initial_data', {}))
+        dispatch(
+          perform('chunks', 'request', { type: '', fields: {}, view: 'view' })
+        )
         clearInterval(handler)
       }
     }
@@ -104,6 +106,8 @@ export const handleInvalidateCache = () => {
 
 export const handleReloadSchema = () => {
   return function(dispatch, getState) {
-    dispatch(perform('chunks', 'request_initial_data', {}))
+    dispatch(
+      perform('chunks', 'request', { type: '', fields: {}, view: 'view' })
+    )
   }
 }

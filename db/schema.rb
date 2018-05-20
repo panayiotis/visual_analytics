@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2018_02_14_141432) do
 
   create_table "chunks", force: :cascade do |t|
     t.text "key", null: false
-    t.text "code", null: false
     t.bigint "byte_size"
     t.bigint "computation_time"
     t.integer "notebook_id"

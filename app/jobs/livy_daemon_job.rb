@@ -52,6 +52,8 @@ class LivyDaemonJob < ApplicationJob
         action.broadcast_to('livy_channel')
         action.cache_to('livy')
       end
+      # print "\033\143" # reset screen
+      # ap action.payload
       action
     end
 
